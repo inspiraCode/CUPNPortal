@@ -1,23 +1,117 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+<div class="container" style="max-width:none;">
+  <div id="myCarousel"
+       style="display: none; width:70%;max-width:700px;min-width:200px;margin-left: auto;margin-right: auto;">
+    <div><img src="images/picture1.jpg" height="300px"/>
+    </div>
+    <div><img src="images/picture2.jpg" height="300px"/></div>
+  </div>
+
+  <div class="row" style="width:100%;padding-bottom:50px;border-bottom: 1px solid #f0f0f0;">
+    <div class="col-sm-3">
+      <h4 class="text-center"><span class="glyphicon glyphicon-star"></span> MAURIS ACCUMSAN NULLA</h4><br>
+
+      <p class="text-center">
+        Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor.
+        Aliquam congue fermentum nisl.
+      </p>
+    </div>
+    <div class="col-sm-3">
+      <h4 class="text-center"><span class="glyphicon glyphicon-book"></span> ETIAM CURSUS LEO VEL</h4><br>
+
+      <p class="text-center">
+        Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor.
+        Aliquam congue fermentum nisl.
+      </p></div>
+    <div class="col-sm-3">
+      <h4 class="text-center"><span class="glyphicon glyphicon-check"></span>VIVAMUS EGET NIBH</h4><br>
+
+      <p class="text-center">
+        Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor.
+        Aliquam congue fermentum nisl.
+      </p></div>
+    <div class="col-sm-3">
+      <h4 class="text-center"><span class="glyphicon glyphicon-glass"></span> UT PHARETRA AUGUE</h4><br>
+
+      <p class="text-center">
+        Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor.
+        Aliquam congue fermentum nisl.
+      </p></div>
+  </div>
+
 </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+<br><br>
+<div class="container" style="max-width: none;">
+  <ul class="nav nav-tabs">
+    <li role="presentation" ng-class="{active:tab=='Aspirantes'}"><a href ng-click="tab='Aspirantes'">Aspirantes</a></li>
+    <li role="presentation" ng-class="{active:tab=='Alumnos'}"><a href ng-click="tab='Alumnos'">Alumnos</a></li>
+    <li role="presentation" ng-class="{active:tab=='Egresados'}"><a href ng-click="tab='Egresados'">Egresados</a></li>
+    <li role="presentation" ng-class="{active:tab=='Academicos'}"><a href ng-click="tab='Academicos'">Académicos</a></li>
+    <li role="presentation" ng-class="{active:tab=='Administrativos'}"><a href ng-click="tab='Administrativos'">Administrativos</a></li>
+  </ul>
+  <div class="panel panel-default" style="border-top: 0;border-radius: 0;min-height:100px;padding:20px;"
+       ng-show="tab=='Aspirantes'">
+    Seccion de aspirantes
+  </div>
+  <div class="panel panel-default" style="border-top: 0;border-radius: 0;min-height:100px;padding:20px;"
+       ng-show="tab=='Alumnos'">
+    Seccion de Alumnos
+  </div>
+  <div class="panel panel-default" style="border-top: 0;border-radius: 0;min-height:100px;padding:20px;"
+       ng-show="tab=='Egresados'">
+    Seccion de Egresados
+  </div>
+  <div class="panel panel-default" style="border-top: 0;border-radius: 0;min-height:100px;padding:20px;"
+       ng-show="tab=='Academicos'">
+    Seccion de Academicos
+  </div>
+  <div class="panel panel-default" style="border-top: 0;border-radius: 0;min-height:100px;padding:20px;"
+       ng-show="tab=='Administrativos'">
+    Seccion de Administrativos
+  </div>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+</div>
+<br><br><br><br>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+<div style="margin-top: 5px; padding: 50px 10px;background-color: #F6F6F6;">
+
+  <div class="container" style="max-width: none;">
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <h2 class="text-center">PRAESENT JUSTO DOLOR, LOBORTIS QUIS LOBORTIS DIGNISSIM,
+          PULVINAR AC, LOREM. VESTIBULUM SED ANTE</h2><br>
+
+        <hr
+          style="margin: auto;margin-bottom:-15px;border-bottom: none;border-top: 1px solid #d1d1d1;width: 550px;display: block;">
+        <br>
+        <hr style="margin: auto;border-bottom: none;border-top: 1px solid #d1d1d1;width: 450px;display: block;">
+        <br>
+
+        <div class="container"><p class="text-center">Fusce euismod consequat ante. Lorem ipsum dolor sit amet,
+          consectetuer adipiscing elit.
+          Pellentesque sed dolor. Aliquam congue fermentum nisl.
+          Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede mi, aliquet
+          sit
+          amet, euismod in, auctor ut, ligula.
+          Aliquam dapibus tincidunt metus</p></div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><img style="width: 100%" src="images/page1_pic1.jpg"></div>
+      <div class="col-sm-3"><img style="width: 100%" src="images/page1_pic2.jpg"></div>
+      <div class="col-sm-3"><img style="width: 100%" src="images/page1_pic3.jpg"></div>
+      <div class="col-sm-3"><img style="width: 100%" src="images/page1_pic4.jpg"></div>
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="col-sm-3"><img style="width: 100%" src="images/page1_pic5.jpg"></div>
+      <div class="col-sm-3"><img style="width: 100%" src="images/page1_pic6.jpg"></div>
+      <div class="col-sm-3"><img style="width: 100%" src="images/page1_pic7.jpg"></div>
+      <div class="col-sm-3"><img style="width: 100%" src="images/page1_pic8.jpg"></div>
+    </div>
+  </div>
 </div>

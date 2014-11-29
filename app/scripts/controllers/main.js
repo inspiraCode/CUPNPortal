@@ -9,9 +9,11 @@
  */
 angular.module('cupnPortalApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.tab='Aspirantes';
+    angular.element('#myCarousel').slick({
+      autoplay: true,
+      autoplaySpeed: 4000,
+      arrows: true,
+      touchMove: true
+    }).show();
   });
