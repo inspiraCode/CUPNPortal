@@ -1,6 +1,6 @@
 /* Space out content a bit */
 body {
-  padding-top: 20px;
+  padding-top: 104px;
   padding-bottom: 20px;
 }
 
@@ -114,3 +114,10 @@ a {
   font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
+
+.unSeparador{
+	background-color: rgb(105, 155, 41);
+	height: 2px;
+	margin-top: 10px;
+}
+

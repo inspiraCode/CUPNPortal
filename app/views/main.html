@@ -1,252 +1,517 @@
-<img src="images/la_X.jpg" width="100%"/>
-<br><br>
-<div class="content" style="padding:20px;max-width: none;">
-  <div>
-    <ul class="nav nav-tabs">
-      <li role="presentation" ng-class="{active:tab=='Aspirantes'}"><a href ng-click="tab='Aspirantes'">Aspirantes</a>
-      </li>
-      <li role="presentation" ng-class="{active:tab=='Alumnos'}"><a href ng-click="tab='Alumnos'">Alumnos</a></li>
-      <li role="presentation" ng-class="{active:tab=='Egresados'}"><a href ng-click="tab='Egresados'">Egresados</a></li>
-      <li role="presentation" ng-class="{active:tab=='Academicos'}"><a href ng-click="tab='Academicos'">Académicos</a>
-      </li>
-      <li role="presentation" ng-class="{active:tab=='Administrativos'}"><a href ng-click="tab='Administrativos'">Administrativos</a>
-      </li>
-    </ul>
-    <div class="panel panel-default" style="border-top: 0;border-radius: 0;min-height:100px;padding:20px;"
-         ng-show="tab=='Aspirantes'">
-      <div class="row">
-        La calidad y diversidad de nuestra oferta académica desde bachillerato hasta posgrados incluyendo el Sistema de
-        Universidad Virtual es motivo de orgullo para toda la Red Universitaria de Jalisco. Conócela y entérate de los
-        requisitos de admisión.
-        La siguiente información puede ser útil para ti:
-      </div>
-      <br>
+<img src="images/la_X.jpg" width="100%" />
+<br>
+<br>
+<div class="content" style="padding: 20px; max-width: none;">
+	<div>
+		<ul class="nav nav-tabs">
+			<li role="presentation" ng-class="{active:tab=='Aspirantes'}"><a
+				href ng-click="tab='Aspirantes'">Aspirantes</a></li>
+			<li role="presentation" ng-class="{active:tab=='Alumnos'}"><a
+				href ng-click="tab='Alumnos'">Alumnos</a></li>
+			<li role="presentation" ng-class="{active:tab=='Egresados'}"><a
+				href ng-click="tab='Egresados'">Egresados</a></li>
+			<li role="presentation" ng-class="{active:tab=='Academicos'}"><a
+				href ng-click="tab='Academicos'">Modalidad y Horarios</a></li>
+			<li role="presentation" ng-class="{active:tab=='Administrativos'}"><a
+				href ng-click="tab='Administrativos'">Administrativos</a></li>
+			<li role="presentation" ng-class="{active:tab=='OfertaAcademica'}"><a
+				href ng-click="tab='OfertaAcademica'">Oferta Academica</a></li>
+		</ul>
+		<div class="panel panel-default"
+			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px;"
+			ng-show="tab=='Aspirantes'">
+			<div class="row">La calidad y diversidad de nuestra oferta
+				académica desde bachillerato hasta posgrados incluyendo el Sistema
+				de Universidad Virtual es motivo de orgullo para toda la Red
+				Universitaria de Jalisco. Conócela y entérate de los requisitos de
+				admisión. La siguiente información puede ser útil para ti:</div>
+			<br>
 
-      <div class="row">
-        <div class="col-sm-6">
-        <img src="images/Registro-Tramites-icon.png" alt="Registro-Tramite" style="width:32px">
-          <a href="#">Registro de tramites</a><br>
+			<div class="row">
+				<div class="col-sm-6">
+					<img src="images/Registro-Tramites-icon.png" alt="Registro-Tramite"
+						style="width: 32px"> <a href="#">Registro de tramites</a><br>
 
-          <p>
-            Pasos a seguir, cambios de aspiración y publicación de resultados.
-          </p>
-          <img  src="images/seguimiento-icon.png" alt="seguimiento" style="width:32px">
-          <a href="#">Seguimiento de tramites</a><br>
+					<p>Pasos a seguir, cambios de aspiración y publicación de
+						resultados.</p>
+					<img src="images/seguimiento-icon.png" alt="seguimiento"
+						style="width: 32px"> <a href="#">Seguimiento de tramites</a><br>
 
-          <p>
-            Para dar seguimiento a tu trámite de ingreso.
-          </p>
-          <a href="#">Documentación requerida</a><br>
+					<p>Para dar seguimiento a tu trámite de ingreso.</p>
+					<a href="#">Documentación requerida</a><br>
 
-          <p>
-            Para todos los niveles, desde bachillerato hasta posgrado.
-          </p>
-        </div>
-        <div class="col-sm-6">
-        <img src="images/education-icon.png" style="width:32px">
-          <a href="#">Oferta Académica</a><br>
+					<p>Para todos los niveles, desde bachillerato hasta posgrado.</p>
+				</div>
+				<div class="col-sm-6">
+					<img src="images/education-icon.png" style="width: 32px"> <a
+						href="" ng-click="tab='OfertaAcademica'">Oferta Académica</a><br>
 
-          <p>
-            Catálogo de programas educativos.
-          </p>
-          <img src="images/todays-icon.png" alt="calendario" style="width:32px">
-          <a href="#">Calendarios Oficiales</a><br>
+					<p>Catálogo de programas educativos.</p>
+					<img src="images/todays-icon.png" alt="calendario"
+						style="width: 32px"> <a href="#">Calendarios Oficiales</a><br>
 
-          <p>
-            Escolares y de trámites para aspirantes.
-          </p>
-          <a href="#">Estudios realizados en el extranjero</a><br>
+					<p>Escolares y de trámites para aspirantes.</p>
+					<a href="#">Estudios realizados en el extranjero</a><br>
 
-          <p>
-            Consideraciones y requisitos.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default" style="border-top: 0;border-radius: 0;min-height:100px;padding:20px;"
-         ng-show="tab=='Alumnos'">
-      <div class="row">
-        Los alumnos son la razón de ser de la universidad. Nuestra prioridad en todos los niveles es una educación
-        integral con perspectivas de sustentabilidad y conciencia social.
-      </div>
-      <h4>Servicios para alumnos</h4>
+					<p>Consideraciones y requisitos.</p>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default"
+			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px;"
+			ng-show="tab=='Alumnos'">
+			<div class="row">Los alumnos son la razón de ser de la
+				universidad. Nuestra prioridad en todos los niveles es una
+				educación integral con perspectivas de sustentabilidad y conciencia
+				social.</div>
+			<h4>Servicios para alumnos</h4>
 
-      <div class="row">
-        <div class="col-sm-4"><a href="#">Taller de estrategias básicas de aprendizaje</a><br>
-          <a href="#">Difusión y asesoría en becas fuera de la Universidad de Guadalajara</a><br>
-          <a href="#">Asesoría en derechos y obligaciones</a><br>
-          <a href="#">Universidad saludable (Afiliación- PrevenIMSS)</a><br></div>
-        <div class="col-sm-4"><a href="#">Trámites y control documental</a><br>
-          <a href="#">Ceremonia de Reconocimiento a Estudiantes Sobresalientes (CRES)</a><br>
-          <a href="#">Torneos deportivos intercentros</a><br>
-          <a href="#">Programa Nacional de Becas para la Educación Superior PRONABES</a><br>
-        </div>
-        <div class="col-sm-4">
-          <a href="#">Oficina de conexión para prácticas profesionales en el extranjero</a><br>
-          <a href="#">Apoyos extracurriculares</a><br>
-          <a href="#">Ligas deportivas interprepas</a><br>
-          <a href="#">Becas Proulex</a><br>
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default" style="border-top: 0;border-radius: 0;min-height:100px;padding:20px;"
-         ng-show="tab=='Egresados'">
-      <div class="row">
-        Los egresados y ex -alumnos tienen la posibilidad de continuar conectados con la universidad, recibir beneficios
-        adicionales y retribuir a la comunidad.
-      </div>
-      <h4>Servicios para Egresados</h4>
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="#">Taller de estrategias básicas de aprendizaje</a><br>
+					<a href="#">Difusión y asesoría en becas fuera de la
+						Universidad de Guadalajara</a><br> <a href="#">Asesoría en
+						derechos y obligaciones</a><br> <a href="#">Universidad
+						saludable (Afiliación- PrevenIMSS)</a><br>
+				</div>
+				<div class="col-sm-4">
+					<a href="#">Trámites y control documental</a><br> <a href="#">Ceremonia
+						de Reconocimiento a Estudiantes Sobresalientes (CRES)</a><br> <a
+						href="#">Torneos deportivos intercentros</a><br> <a href="#">Programa
+						Nacional de Becas para la Educación Superior PRONABES</a><br>
+				</div>
+				<div class="col-sm-4">
+					<a href="#">Oficina de conexión para prácticas profesionales
+						en el extranjero</a><br> <a href="#">Apoyos extracurriculares</a><br>
+					<a href="#">Ligas deportivas interprepas</a><br> <a href="#">Becas
+						Proulex</a><br>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default"
+			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px;"
+			ng-show="tab=='Egresados'">
+			<div class="row">Los egresados y ex -alumnos tienen la
+				posibilidad de continuar conectados con la universidad, recibir
+				beneficios adicionales y retribuir a la comunidad.</div>
+			<h4>Servicios para Egresados</h4>
 
-      <div class="row">
-        <div class="col-sm-4"><a href="#">Red de bolsa de trabajo</a><br>
-          <a href="#">Oficina de conexión para prácticas profesionales en el extranjero</a><br>
-        </div>
-        <div class="col-sm-4">
-          <a href="#">Credencial de egresados</a><br>
-          <a href="#">Difusión y asesoría en becas fuera de la Universidad de Guadalajara</a><br>
-        </div>
-        <div class="col-sm-4">
-          <a href="#">Trámites y control documental</a><br>
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default" style="border-top: 0;border-radius: 0;min-height:100px;padding:20px;"
-         ng-show="tab=='Academicos'">
-      <div class="row">
-        La diversidad y el compromiso de los académicos aseguran la excelencia académica en las aulas y los centros de
-        investigación de todas las áreas del conocimiento.
-      </div>
-      <h4>Circulares</h4>
-      <a href="#">Circular N° 16</a><br>
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="#">Red de bolsa de trabajo</a><br> <a href="#">Oficina
+						de conexión para prácticas profesionales en el extranjero</a><br>
+				</div>
+				<div class="col-sm-4">
+					<a href="#">Credencial de egresados</a><br> <a href="#">Difusión
+						y asesoría en becas fuera de la Universidad de Guadalajara</a><br>
+				</div>
+				<div class="col-sm-4">
+					<a href="#">Trámites y control documental</a><br>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default"
+			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px;"
+			ng-show="tab=='Academicos'">
+			<h4>Planteles</h4>
+			<a href="">PLANTEL JUAREZ NUEVO</a><br>
 
-      <p>LUNES 17 de Noviembre de 2014, (en conmemoración de 20 de noviembre), será día de descanso obligatorio para el
-        personal Académico y Administrativo (cláusulas 33 y 61 de los Contratos Colectivos de Trabajo celebrados con el
-        STAUdeG y SUTUdeG, respectivamente).</p>
+			<div class="row">
+				<div class="col-sm-4">
+					MODALIDAD SABATINO<br>SABADOS HORARIO 8:00am a 2:20pm
+				</div>
+				<div class="col-sm-8">
+					<a href="">Oferta Acad�mica</a><br> Lic. En Administraci�n de
+					Empresas<br> Lic. En Contaduria P�blica<br> Lic. En
+					Derecho<br> Asistencia Educativa<br> Preparatoria
+					Tetramestral<br> Diplomados
 
-      <a href="#">Circular N° 14</a><br>
+				</div>
 
-      <p>Lunes 15 de septiembre de 2014, Día de descanso obligatorio para personal académico y administrativo de la
-        UdeG, en sustitución del 12 de octubre, a solicitud del Sindicato de Trabajadores Académicos de la UdeG y del
-        Sindicato Único de Trabajadores de la
-        <UdeG class=""></UdeG>
-      </p>
+			</div>
+			<a href="#">PLANTEL ZARAGOZA </a><br>
+			<div class="row">
+				<div class="col-sm-4">
+					MODALIDAD MATUTINO - SABATINO SABADOS<br> HORARIO 8:00am a
+					1:30pm<br>LUNES A VIERNES 8:00am a 1:30pm
+				</div>
+				<div class="col-sm-8">
+					<a href="">Oferta Acad�mica</a><br> Aux. Tec. En Enfermeria<br> Aux.
+					Tec. En Terapia Fisica<br> Aux. Tec. En Urgencias Medicas<br>
+					Preparatoria semestral
 
-      <a href="#">Circular N° 13</a><br>
+				</div>
+			</div>
+			<a href="#">EN TU EMPRESA</a><br>
+			<div class="row">
+				<div class="col-sm-4">
+					HORARIOS FLEXIBLES<br> DIAS: SE ADEC�A A TUS NECESIDADES
+				</div>
+				<div class="col-sm-8">
+					<a href="">Oferta Acad�mica</a><br> Lic. En Administraci�n de Empresas<br>
+					Lic. En Contadur�a P�blica<br> Lic. En Derecho<br>
+					Preparatoria Tetramestral<br> Diplomados
+				</div>
+			</div>
 
-      <p>MARTES 16 de Septiembre de 2014: Día de descanso obligatorio para el personal académico y administrativo de la
-        UdeG (Cláusulas 33 y 61 de los Contratos Colectivos de Trabajo celebrados con el STAUdeG y SUTUdeG,
-        respectivamente).</p>
+
+		</div>
+		<div class="panel panel-default"
+			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px;"
+			ng-show="tab=='Administrativos'">
+			<div class="row">Las actividades administrativas acotan y
+				mantienen vigentes las políticas y procesos universitarios. Esta
+				sección te mantendrá informado sobre las actividades y procesos
+				administrativos.</div>
+			<h4>Circulares</h4>
+			<a href="#">Circular N° 16</a><br>
+
+			<p>LUNES 17 de Noviembre de 2014, (en conmemoración de 20 de
+				noviembre), será día de descanso obligatorio para el personal
+				Académico y Administrativo (cláusulas 33 y 61 de los Contratos
+				Colectivos de Trabajo celebrados con el STAUdeG y SUTUdeG,
+				respectivamente).</p>
+
+			<a href="#">Circular N° 14</a><br>
+
+			<p>
+				Lunes 15 de septiembre de 2014, Día de descanso obligatorio para
+				personal académico y administrativo de la UdeG, en sustitución del
+				12 de octubre, a solicitud del Sindicato de Trabajadores Académicos
+				de la UdeG y del Sindicato Único de Trabajadores de la
+				<UdeG class=""></UdeG>
+			</p>
+
+			<a href="#">Circular N° 13</a><br>
+
+			<p>MARTES 16 de Septiembre de 2014: Día de descanso obligatorio
+				para el personal académico y administrativo de la UdeG (Cláusulas
+				33 y 61 de los Contratos Colectivos de Trabajo celebrados con el
+				STAUdeG y SUTUdeG, respectivamente).</p>
+
+		</div>
+
+		<div class="panel panel-default"
+			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px;"
+			ng-show="tab=='OfertaAcademica'">
 
 
-    </div>
-    <div class="panel panel-default" style="border-top: 0;border-radius: 0;min-height:100px;padding:20px;"
-         ng-show="tab=='Administrativos'">
-      <div class="row">
-        Las actividades administrativas acotan y mantienen vigentes las políticas y procesos universitarios. Esta
-        sección te mantendrá informado sobre las actividades y procesos administrativos.
-      </div>
-      <h4>Circulares</h4>
-      <a href="#">Circular N° 16</a><br>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-sm-4">
+							<h4>Clave de Incorporacion</h4>
+						</div>
 
-      <p>LUNES 17 de Noviembre de 2014, (en conmemoración de 20 de noviembre), será día de descanso obligatorio para el
-        personal Académico y Administrativo (cláusulas 33 y 61 de los Contratos Colectivos de Trabajo celebrados con el
-        STAUdeG y SUTUdeG, respectivamente).</p>
+						<div class="col-sm-4">
+							<h4>Nivel Profesional</h4>
+						</div>
 
-      <a href="#">Circular N° 14</a><br>
+						<div class="col-sm-4">
+							<h4>Acuerdo</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">08PSU5031F</div>
 
-      <p>Lunes 15 de septiembre de 2014, Día de descanso obligatorio para personal académico y administrativo de la
-        UdeG, en sustitución del 12 de octubre, a solicitud del Sindicato de Trabajadores Académicos de la UdeG y del
-        Sindicato Único de Trabajadores de la
-        <UdeG class=""></UdeG>
-      </p>
+						<div class="col-sm-4">
+							<a href="" data-toggle="modal" data-target="#modalLAE"> Lic.
+								En Administracion de Empresas </a>
+						</div>
 
-      <a href="#">Circular N° 13</a><br>
+						<div class="col-sm-4">20121431</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">08PSU5031F</div>
 
-      <p>MARTES 16 de Septiembre de 2014: Día de descanso obligatorio para el personal académico y administrativo de la
-        UdeG (Cláusulas 33 y 61 de los Contratos Colectivos de Trabajo celebrados con el STAUdeG y SUTUdeG,
-        respectivamente).</p>
+						<div class="col-sm-4">Lic. En Contaduria Publica</div>
 
-    </div>
+						<div class="col-sm-4">20121432</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">08PSU5031F</div>
 
-    <div class="row" style="width:100%;padding-bottom:50px;border-bottom: 1px solid #f0f0f0;">
-      <div class="col-sm-3">
-        <h4 class="text-center"><span class="glyphicon glyphicon-star"></span> MAURIS ACCUMSAN NULLA</h4><br>
+						<div class="col-sm-4">Lic. En Derecho</div>
 
-        <p class="text-center">
-          Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed
-          dolor.
-          Aliquam congue fermentum nisl.
-        </p>
-      </div>
-      <div class="col-sm-3">
-        <h4 class="text-center"><span class="glyphicon glyphicon-book"></span> ETIAM CURSUS LEO VEL</h4><br>
+						<div class="col-sm-4">20121433</div>
+					</div>
 
-        <p class="text-center">
-          Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed
-          dolor.
-          Aliquam congue fermentum nisl.
-        </p></div>
-      <div class="col-sm-3">
-        <h4 class="text-center"><span class="glyphicon glyphicon-check"></span>VIVAMUS EGET NIBH</h4><br>
+				</div>
+			</div>
+			<div class="unSeparador"></div>
+			<div class="row">
+				<div class="col-sm-12">
 
-        <p class="text-center">
-          Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed
-          dolor.
-          Aliquam congue fermentum nisl.
-        </p></div>
-      <div class="col-sm-3">
-        <h4 class="text-center"><span class="glyphicon glyphicon-glass"></span> UT PHARETRA AUGUE</h4><br>
+					<div class="row">
+						<div class="col-sm-6">
+							<h4>Clave de Incorporacion</h4>
+						</div>
+						<div class="col-sm-6">
+							<h4>Nivel Medio Superior</h4>
+						</div>
 
-        <p class="text-center">
-          Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed
-          dolor.
-          Aliquam congue fermentum nisl.
-        </p></div>
-    </div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">08PBH3702W</div>
+						<div class="col-sm-6">Bachillerato General Plan Trimestral</div>
 
-    <br><br><br><br>
+					</div>
 
-    <div style="margin-top: 5px; padding: 50px 10px;background-color: #F6F6F6;">
+					<div class="row">
+						<div class="col-sm-6"></div>
+						<div class="col-sm-6">En 2 a&#241;os modalidad
+							presencial(sabatina) y virtual</div>
 
-      <div class="container" style="max-width: none;">
-        <div class="row">
-          <div class="col-sm-1"></div>
-          <div class="col-sm-10">
-            <h2 class="text-center">PRAESENT JUSTO DOLOR, LOBORTIS QUIS LOBORTIS DIGNISSIM,
-              PULVINAR AC, LOREM. VESTIBULUM SED ANTE</h2><br>
+					</div>
+				</div>
+			</div>
+			<div class="unSeparador"></div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-sm-6">
+							<h4>Clave de Incorporacion</h4>
+						</div>
+						<div class="col-sm-6">
+							<h4>Diplomados</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">08PBT0452H</div>
+						<div class="col-sm-6">Asistencia Educativa</div>
+					</div>
 
-            <hr
-              style="margin: auto;margin-bottom:-15px;border-bottom: none;border-top: 1px solid #d1d1d1;width: 550px;display: block;">
-            <br>
-            <hr style="margin: auto;border-bottom: none;border-top: 1px solid #d1d1d1;width: 450px;display: block;">
-            <br>
+					<div class="row">
+						<div class="col-sm-6">08PBT0452H</div>
+						<div class="col-sm-6">Asistencia Familiar y de Salud</div>
+					</div>
+				</div>
+			</div>
+			<div class="unSeparador"></div>
+			<div class="row">
+				<div class="col-sm-12">
+					<h4>Capacitaciones Laborales Formacion para el Trabajo REG.
+						ENO-050318-4UA-0013</h4>
+					Aux. Tec. En Enfermeria<br>Aux. Tec. En Terapia Fisica<br>
+					Aux. Tec. En Urgencias Medicas<br>
 
-            <div class="container"><p class="text-center">Fusce euismod consequat ante. Lorem ipsum dolor sit amet,
-              consectetuer adipiscing elit.
-              Pellentesque sed dolor. Aliquam congue fermentum nisl.
-              Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede mi,
-              aliquet
-              sit
-              amet, euismod in, auctor ut, ligula.
-              Aliquam dapibus tincidunt metus</p></div>
-            <br><br>
 
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-3"><img style="width: 100%" src="images/page1_pic1.jpg"></div>
-          <div class="col-sm-3"><img style="width: 100%" src="images/page1_pic2.jpg"></div>
-          <div class="col-sm-3"><img style="width: 100%" src="images/page1_pic3.jpg"></div>
-          <div class="col-sm-3"><img style="width: 100%" src="images/page1_pic4.jpg"></div>
-        </div>
-        <br>
+				</div>
+			</div>
 
-        <div class="row">
-          <div class="col-sm-3"><img style="width: 100%" src="images/page1_pic5.jpg"></div>
-          <div class="col-sm-3"><img style="width: 100%" src="images/page1_pic6.jpg"></div>
-          <div class="col-sm-3"><img style="width: 100%" src="images/page1_pic7.jpg"></div>
-          <div class="col-sm-3"><img style="width: 100%" src="images/page1_pic8.jpg"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+
+		</div>
+
+
+<br>
+<br>
+<br>
+
+		<div class="row">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-10">
+				<h2 class="text-center">MODALIDAD VIRTUAL</h2>
+				<h3 class="text-center">Introduccion</h3>
+				<p class="text-justify">El uso de las nuevas tecnolog�as en la educaci�n transforma
+					el proceso de aprendizaje y, por tanto, los comportamientos de los
+					que ense�an y de los que aprenden. � Se modifican los roles
+					tradicionales del docente y el alumno. La ense�anza bajo esta
+					modalidad supone una disminuci�n de la jerarqu�a y la directividad,
+					al tiempo que estimula el trabajo aut�nomo del alumno y exige que
+					el profesor sea un animador y un tutor del proceso de aprendizaje
+					del alumno.</p>
+				<br>
+
+				<hr
+					style="margin: auto; margin-bottom: -15px; border-bottom: none; border-top: 1px solid #d1d1d1; width: 550px; display: block;">
+				<br>
+				<hr
+					style="margin: auto; border-bottom: none; border-top: 1px solid #d1d1d1; width: 450px; display: block;">
+				<br>
+
+					<h3 class="text-center">Descripcion</h3>
+					<p class="text-justify">La posibilidad que las tecnolog�as ofrecen de acceder
+						r�pidamente a una gran cantidad de informaci�n hace necesario que
+						el profesor complemente su tradicional actividad transmisora de
+						conocimientos con un esfuerzo de "aprendizaje de su propio
+						conocimiento a partir del conjunto de recursos de informaci�n
+						disponible. � Aprender en un entorno con estas caracter�sticas
+						supone, por una parte, la flexibilidad en los tiempos y espacios
+						destinados al aprendizaje y, por otra, el protagonismo de la
+						interacci�n entre los participantes del proceso para la
+						construcci�n de conocimientos significativos. De este modo, un
+						aprendizaje virtual interactivo debe dise�ar estrategias que
+						posibiliten la interacci�n sincr�nica y asincr�nica efectiva
+						entre: alumno-contenido.</p>
+
+				<br> <br>
+
+			</div>
+		</div>
+		
+
+		<div class="row"
+			style="width: 100%; padding-bottom: 50px; border-bottom: 1px solid #f0f0f0;">
+			<div class="col-sm-3">
+				<h4 class="text-center">
+					<span class="glyphicon glyphicon-star"></span>MODALIDAD VIRTUAL
+				</h4>
+				<br>
+
+				<p class="text-center">Clases virtuales con sus respectivas
+					actividades (desarrollo de los contenidos, consignas de los
+					profesores, actividades de aprendizaje, actividades de evaluaci�n y
+					de autoevaluaci�n).</p>
+			</div>
+			<div class="col-sm-3">
+				<h4 class="text-center">
+					<span class="glyphicon glyphicon-book"></span> CORREO ELECTRONICO
+				</h4>
+				<br>
+
+				<p class="text-center">Correo electr�nico para comunicarse con
+					tutores y estudiantes desde el mismo entorno virtual.</p>
+			</div>
+			<div class="col-sm-3">
+				<h4 class="text-center">
+					<span class="glyphicon glyphicon-check"></span>Chats y Foros
+				</h4>
+				<br>
+
+				<p class="text-center">Para propiciar la interacci�n y los
+					encuentros entre tutores y estudiantes.</p>
+			</div>
+			<div class="col-sm-3">
+				<h4 class="text-center">
+					<span class="glyphicon glyphicon-glass"></span> COMUNIDAD VIRTUAL
+				</h4>
+				<br>
+
+				<p class="text-center">Organizada en �reas de conocimientos de
+					funcionamiento extra-aulico.</p>
+			</div>
+
+			<div class="col-sm-3">
+				<h4 class="text-center">
+					<span class="glyphicon glyphicon-glass"></span> INFORMACION
+				</h4>
+				<br>
+
+				<p class="text-center">Informacion actualizada del calendario
+					acad�mico dispuesto para cada curso.</p>
+			</div>
+
+
+			<div class="col-sm-3">
+				<h4 class="text-center">
+					<span class="glyphicon glyphicon-glass"></span> MESA DE AYUDA
+				</h4>
+				<br>
+
+				<p class="text-center">Mesa de ayuda para realizar consultas
+					t�cnicas y tr�mites administrativos en l�nea.</p>
+			</div>
+
+			<div class="col-sm-3">
+				<h4 class="text-center">
+					<span class="glyphicon glyphicon-share-alt"></span> AREA DEL
+					ESTUDIANTE
+				</h4>
+				<br>
+
+				<p class="text-center">Area del Estudiante que le ofrece
+					herramientas para efectuar un seguimiento de su propia
+					participaci�n en el curso y un buz�n para enviar las actividades
+					realizadas en el marco del curso.</p>
+			</div>
+		</div>
+
+		<br> <br> <br> <br>
+
+		<div
+			style="margin-top: 5px; padding: 50px 10px; background-color: #F6F6F6;">
+
+			<div class="container" style="max-width: none;">
+				<div class="row">
+					<div class="col-sm-1"></div>
+					<div class="col-sm-10">
+						<h2 class="text-center">PRAESENT JUSTO DOLOR, LOBORTIS QUIS
+							LOBORTIS DIGNISSIM, PULVINAR AC, LOREM. VESTIBULUM SED ANTE</h2>
+						<br>
+
+						<hr
+							style="margin: auto; margin-bottom: -15px; border-bottom: none; border-top: 1px solid #d1d1d1; width: 550px; display: block;">
+						<br>
+						<hr
+							style="margin: auto; border-bottom: none; border-top: 1px solid #d1d1d1; width: 450px; display: block;">
+						<br>
+
+						<div class="container">
+							<p class="text-center">Fusce euismod consequat ante. Lorem
+								ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque
+								sed dolor. Aliquam congue fermentum nisl. Mauris accumsan nulla
+								vel diam. Sed in lacus ut enim adipiscing aliquet. Nulla
+								venenatis. In pede mi, aliquet sit amet, euismod in, auctor ut,
+								ligula. Aliquam dapibus tincidunt metus</p>
+						</div>
+						<br> <br>
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-3">
+						<img style="width: 100%" src="images/page1_pic1.jpg">
+					</div>
+					<div class="col-sm-3">
+						<img style="width: 100%" src="images/page1_pic2.jpg">
+					</div>
+					<div class="col-sm-3">
+						<img style="width: 100%" src="images/page1_pic3.jpg">
+					</div>
+					<div class="col-sm-3">
+						<img style="width: 100%" src="images/page1_pic4.jpg">
+					</div>
+				</div>
+				<br>
+
+				<div class="row">
+					<div class="col-sm-3">
+						<img style="width: 100%" src="images/page1_pic5.jpg">
+					</div>
+					<div class="col-sm-3">
+						<img style="width: 100%" src="images/page1_pic6.jpg">
+					</div>
+					<div class="col-sm-3">
+						<img style="width: 100%" src="images/page1_pic7.jpg">
+					</div>
+					<div class="col-sm-3">
+						<img style="width: 100%" src="images/page1_pic8.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="modalLAE" tabindex="-1" role="dialog"
+		aria-labelledby="modalLAE" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="labelTitleLAE">Licenciatura en
+						Administracion de Empresas</h4>
+				</div>
+				<div class="modal-body">
+					<img src="/images/logo.png">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
