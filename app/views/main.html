@@ -4,27 +4,35 @@
 <div class="container" style="padding: 20px; max-width: none;">
 	<div>
 		<ul class="nav nav-tabs">
+			<li role="presentation" ng-class="{active:tab=='OfertaAcademica'}"><a
+				href ng-click="tab='OfertaAcademica'"
+				ng-style="{'background-color':tab=='OfertaAcademica' ? '#F5F5F5' : null}">
+					<img src="images/education-icon.png" style="width: 32px">
+					Oferta Academica
+			</a></li>
 			<li role="presentation" ng-class="{active:tab=='Aspirantes'}"><a
 				href ng-click="tab='Aspirantes'"
-				ng-style="{'background-color':tab=='Aspirantes' ? '#F5F5F5' : null}">Aspirantes</a></li>
+				ng-style="{'background-color':tab=='Aspirantes' ? '#F5F5F5' : null}"><img
+					src="images/groups-icon.png" style="width: 32px"> Aspirantes</a></li>
 			<li role="presentation" ng-class="{active:tab=='Alumnos'}"><a
 				href ng-click="tab='Alumnos'"
-				ng-style="{'background-color':tab=='Alumnos' ? '#F5F5F5' : null}">Alumnos</a></li>
+				ng-style="{'background-color':tab=='Alumnos' ? '#F5F5F5' : null}">
+					<img src="images/graduated-icon.png"> Alumnos
+			</a></li>
 			<li style="display: none;" role="presentation"
 				ng-class="{active:tab=='Egresados'}"><a href
 				ng-click="tab='Egresados'"
 				ng-style="{'background-color':tab=='Egresados' ? '#F5F5F5' : null}">Egresados</a></li>
 			<li role="presentation" ng-class="{active:tab=='Academicos'}"><a
 				href ng-click="tab='Academicos'"
-				ng-style="{'background-color':tab=='Academicos' ? '#F5F5F5' : null}">Modalidad
-					y Horarios</a></li>
+				ng-style="{'background-color':tab=='Academicos' ? '#F5F5F5' : null}">
+					<img src="images/schedule-icon.png"> Modalidad y Horarios
+			</a></li>
 			<li role="presentation" ng-class="{active:tab=='Administrativos'}"><a
 				href ng-click="tab='Administrativos'"
-				ng-style="{'background-color':tab=='Administrativos' ? '#F5F5F5' : null}">Administrativos</a></li>
-			<li role="presentation" ng-class="{active:tab=='OfertaAcademica'}"><a
-				href ng-click="tab='OfertaAcademica'"
-				ng-style="{'background-color':tab=='OfertaAcademica' ? '#F5F5F5' : null}">Oferta
-					Academica</a></li>
+				ng-style="{'background-color':tab=='Administrativos' ? '#F5F5F5' : null}">
+					<img src="images/admin-icon.png" style="width: 32px">Administrativos
+			</a></li>
 		</ul>
 		<div class="panel panel-default"
 			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #F5F5F5;"
@@ -32,8 +40,8 @@
 			<div class="row">La calidad y diversidad de nuestra oferta
 				académica desde bachillerato hasta posgrados incluyendo el Sistema
 				de Universidad Virtual es motivo de orgullo para toda la Red
-				Universitaria de Jalisco. Conócela y entérate de los requisitos de
-				admisión. La siguiente información puede ser útil para ti:</div>
+				Universitaria. Conócela y entérate de los requisitos de admisión.
+				La siguiente información puede ser útil para ti:</div>
 			<br>
 
 			<div class="row">
@@ -225,7 +233,7 @@
 						<div class="col-sm-4">08PSU5031F</div>
 
 						<div class="col-sm-5">
-							<img src="images/logo.png" alt="seguimiento" style="width: 32px">
+							<img src="images/suit-icon.png" alt="Administracion" style="width: 16px">
 							<a href="" data-toggle="modal" data-target="#modalLAE"> Lic.
 								En Administracion de Empresas </a>
 						</div>
@@ -236,7 +244,7 @@
 						<div class="col-sm-4">08PSU5031F</div>
 
 						<div class="col-sm-5">
-							<img src="images/logo.png" alt="seguimiento" style="width: 32px">
+							<img src="images/chart-icon.png" alt="seguimiento" style="width: 16px">
 							<a href="" data-toggle="modal" data-target="#modalLCP"> Lic.
 								En Contaduria Publica </a>
 						</div>
@@ -247,7 +255,7 @@
 						<div class="col-sm-4">08PSU5031F</div>
 
 						<div class="col-sm-5">
-							<img src="images/logo.png" alt="seguimiento" style="width: 32px">
+							<img src="images/scale-icon.png" alt="seguimiento" style="width: 16px">
 							<a href="" data-toggle="modal" data-target="#modalLD"> Lic.
 								En Derecho </a>
 						</div>
@@ -276,15 +284,15 @@
 							<img src="images/preparatoria.png" alt="seguimiento"
 								style="width: 32px"> <a href="" data-toggle="modal"
 								data-target="#modalBACH"> Bachillerato General Plan
-								Trimestral </a>
+								Tetramestral </a>
 						</div>
 
 					</div>
 
 					<div class="row">
 						<div class="col-sm-4"></div>
-						<div class="col-sm-8">En 2 a&#241;os modalidad
-							presencial(sabatina) y virtual</div>
+						<div class="col-sm-8">En 3 a&#241;os modalidad
+							mixta, presencial y virtual</div>
 					</div>
 
 				</div>
@@ -312,9 +320,9 @@
 					<div class="row">
 						<div class="col-sm-4">08PBT0452H</div>
 						<div class="col-sm-8">
-							<img src="images/salud.jpg" alt="seguimiento"
-								style="width: 32px"> <a href="" data-toggle="modal"
-								data-target="#modalAFS"> Asistencia Familiar y de Salud </a>
+							<img src="images/salud.jpg" alt="seguimiento" style="width: 32px">
+							<a href="" data-toggle="modal" data-target="#modalAFS">
+								Asistencia Familiar y de Salud </a>
 						</div>
 					</div>
 				</div>
@@ -348,7 +356,7 @@
 		<div class="row">
 			<div class="col-sm-1"></div>
 			<div class="col-sm-10">
-				<h2 class="text-center">MODALIDAD VIRTUAL</h2>
+				<h2 class="text-center">MODALIDAD MIXTA</h2>
 				<h3 class="text-center">Introduccion</h3>
 				<p class="text-justify">El uso de las nuevas tecnolog&#237;as en
 					la educaci&#243;n transforma el proceso de aprendizaje y, por
@@ -392,11 +400,11 @@
 		<div class="row" style="width: 100%;">
 			<div class="col-sm-3">
 				<h4 class="text-center">
-					<span class="glyphicon glyphicon-star"></span>MODALIDAD VIRTUAL
+					<span class="glyphicon glyphicon-star"></span>MODALIDAD MIXTA
 				</h4>
 				<br>
 
-				<p class="text-center">Clases virtuales con sus respectivas
+				<p class="text-center">Clases mixtas de forma presencial y virtuales con sus respectivas
 					actividades (desarrollo de los contenidos, consignas de los
 					profesores, actividades de aprendizaje, actividades de
 					evaluaci&#243;n y de autoevaluaci&#243;n).</p>
@@ -431,7 +439,7 @@
 
 		</div>
 		<div class="row"
-			style="width: 100%;border-bottom: 1px solid #f0f0f0;">
+			style="width: 100%; border-bottom: 1px solid #f0f0f0;">
 			<div class="col-sm-2"></div>
 
 			<div class="col-sm-3">
@@ -534,7 +542,7 @@
 	<!-- Modal -->
 	<div class="modal fade" id="modalLAE" tabindex="-1" role="dialog"
 		aria-labelledby="modalLAE" aria-hidden="true">
-		<div class="modal-dialog">
+		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
@@ -577,7 +585,7 @@
 	<!-- Modal -->
 	<div class="modal fade" id="modalLCP" tabindex="-1" role="dialog"
 		aria-labelledby="modalLCP" aria-hidden="true">
-		<div class="modal-dialog">
+		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
@@ -631,7 +639,7 @@
 	<!-- Modal -->
 	<div class="modal fade" id="modalLD" tabindex="-1" role="dialog"
 		aria-labelledby="modalLD" aria-hidden="true">
-		<div class="modal-dialog">
+		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
@@ -675,7 +683,7 @@
 	<!-- Modal -->
 	<div class="modal fade" id="modalBACH" tabindex="-1" role="dialog"
 		aria-labelledby="modalBACH" aria-hidden="true">
-		<div class="modal-dialog">
+		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
@@ -715,7 +723,7 @@
 	<!-- Modal -->
 	<div class="modal fade" id="modalAE" tabindex="-1" role="dialog"
 		aria-labelledby="modalAE" aria-hidden="true">
-		<div class="modal-dialog">
+		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
@@ -763,7 +771,7 @@
 	<!-- Modal -->
 	<div class="modal fade" id="modalAFS" tabindex="-1" role="dialog"
 		aria-labelledby="modalAFS" aria-hidden="true">
-		<div class="modal-dialog">
+		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
@@ -816,7 +824,7 @@
 	<!-- Modal -->
 	<div class="modal fade" id="modalATE" tabindex="-1" role="dialog"
 		aria-labelledby="modalAFS" aria-hidden="true">
-		<div class="modal-dialog">
+		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
@@ -862,7 +870,7 @@
 	<!-- Modal -->
 	<div class="modal fade" id="modalATTF" tabindex="-1" role="dialog"
 		aria-labelledby="modalAFS" aria-hidden="true">
-		<div class="modal-dialog">
+		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
@@ -903,7 +911,7 @@
 	<!-- Modal -->
 	<div class="modal fade" id="modalATUM" tabindex="-1" role="dialog"
 		aria-labelledby="modalAFS" aria-hidden="true">
-		<div class="modal-dialog">
+		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
