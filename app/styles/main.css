@@ -2,6 +2,7 @@
 body {
   padding-top: 104px;
   padding-bottom: 20px;
+  background: #fff url(../images/bg.png) repeat left top;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */

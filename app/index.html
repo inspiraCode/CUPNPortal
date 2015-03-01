@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="styles/main.css">
 <!-- endbuild -->
 </head>
-<body ng-app="cupnPortalApp">
+<body ng-app="cupnPortalApp" ng-controller="MainCtrl">
 	<!--[if lt IE 7]>
 <p class="browsehappy">Usted esta utilizando un explorador <strong>desactualizado</strong>.
   Por favor <a href="http://browsehappy.com/">actualize su explorador </a> para mejorar la experiencia con el sitio web.
@@ -27,10 +27,15 @@
 	<!-- Add your site or application content here -->
 
 
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<img src="images/logo-ico.png"
+		style="width: 135px; display: block; position: fixed; top: 5px; left: 10px; z-index: 1031;" />
+	<img src="images/CUPN.png"
+		style="display: block; position: fixed; top: 38px; left: 130px; z-index: 1031;" />
+	<nav class="navbar navbar-default navbar-fixed-top"
+		style="min-height: 104px;">
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
+			<div class="navbar-header" style="min-height: 104px;">
 				<button type="button" class="navbar-toggle collapsed"
 					data-toggle="collapse" data-target="#navbar-collapse-mainToolbar">
 					<span class="sr-only">Toggle navigation</span> <span
@@ -38,19 +43,15 @@
 						class="icon-bar"></span>
 				</button>
 
-				<div style="min-width: 365px; display: block-inline;">
-					<img src="images/logo-ico.png" style="width: 135px;" /> <img
-						src="images/CUPN.png" />
-				</div>
-
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse"
 				id="navbar-collapse-mainToolbar">
-				<ul class="nav navbar-nav navbar-right" style="margin-top: 53px;">
+				<div class="hidden-xs hidden-sm" style="width:100px;height:54px;"></div>
+				<ul class="nav navbar-nav navbar-right">
 
-					<li ng-class="{active:isActive('/')}"><a ng-href="#/">Inicio</a></li>
+					<li ng-class="{active:isActive('/')}"><a href="" ng-click="go('/');">Inicio</a></li>
 
 					<li role="presentation" class="dropdown"><a
 						class="dropdown-toggle" data-toggle="dropdown" data-target="#"
@@ -58,22 +59,22 @@
 							class="caret"></span>
 					</a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a
+							<li><a ng-click="go('');"
 								href="http://centrouniversitariopasodelnorte.com/moodle/login/index.php"
 								target="_blank"> <img src="images/board-icon.png">
 									Plataforma Virtual Educativa
 							</a></li>
 							<li class="divider"></li>
-							<li><a
+							<li><a ng-click="go('');"
 								href="http://centrouniversitariopasodelnorte.com/bibliotecas/cgi-bin/library.cgi"
 								target="_blank"> <img src="images/library-icon.png">
 									Biblioteca Virtual
 							</a></li>
 						</ul></li>
 					<li ng-class="{active:isActive('/about')}"><a
-						ng-href="#/about">Acerca de</a></li>
+						href="" ng-click="go('/about');">Acerca de</a></li>
 					<li ng-class="{active:isActive('/contactUs')}"><a
-						ng-href="#/contactUs">Contacto</a></li>
+						href="" ng-click="go('/contactUs');">Contacto</a></li>
 
 				</ul>
 			</div>
@@ -110,6 +111,7 @@
 	<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 	<script src="bower_components/angular-touch/angular-touch.js"></script>
 	<script src="bower_components/slick.js/slick/slick.min.js"></script>
+	<script src="bower_components/ng-resize/ngresize.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
 

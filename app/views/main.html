@@ -1,41 +1,47 @@
-<img src="images/la_X.jpg" width="100%" style="min-height: 80px;" />
-<br>
-<br>
+	<div id="myCarousel"
+		style="display: none; width: 100%; min-width: 200px; margin-left: auto; margin-right: auto;">
+		<div>
+			<img id="img1" src="images/slider/la_X.jpg" height="200px" />
+		</div>
+		<div>
+			<img id="img2" src="images/slider/la_X_2.jpg" height="200px" />
+		</div>
+	</div>
 <div class="container" style="padding: 20px; max-width: none;">
 	<div>
 		<ul class="nav nav-tabs">
 			<li role="presentation" ng-class="{active:tab=='OfertaAcademica'}"><a
 				href ng-click="tab='OfertaAcademica'"
-				ng-style="{'background-color':tab=='OfertaAcademica' ? '#F5F5F5' : null}">
+				ng-style="{'background-color':tab=='OfertaAcademica' ? '#E6EAE6' : null}">
 					<img src="images/education-icon.png" style="width: 32px">
 					Oferta Academica
 			</a></li>
 			<li role="presentation" ng-class="{active:tab=='Aspirantes'}"><a
 				href ng-click="tab='Aspirantes'"
-				ng-style="{'background-color':tab=='Aspirantes' ? '#F5F5F5' : null}"><img
+				ng-style="{'background-color':tab=='Aspirantes' ? '#E6EAE6' : null}"><img
 					src="images/groups-icon.png" style="width: 32px"> Aspirantes</a></li>
 			<li role="presentation" ng-class="{active:tab=='Alumnos'}"><a
 				href ng-click="tab='Alumnos'"
-				ng-style="{'background-color':tab=='Alumnos' ? '#F5F5F5' : null}">
+				ng-style="{'background-color':tab=='Alumnos' ? '#E6EAE6' : null}">
 					<img src="images/graduated-icon.png"> Alumnos
 			</a></li>
 			<li style="display: none;" role="presentation"
 				ng-class="{active:tab=='Egresados'}"><a href
 				ng-click="tab='Egresados'"
-				ng-style="{'background-color':tab=='Egresados' ? '#F5F5F5' : null}">Egresados</a></li>
+				ng-style="{'background-color':tab=='Egresados' ? '#E6EAE6' : null}">Egresados</a></li>
 			<li role="presentation" ng-class="{active:tab=='Academicos'}"><a
 				href ng-click="tab='Academicos'"
-				ng-style="{'background-color':tab=='Academicos' ? '#F5F5F5' : null}">
+				ng-style="{'background-color':tab=='Academicos' ? '#E6EAE6' : null}">
 					<img src="images/schedule-icon.png"> Modalidad y Horarios
 			</a></li>
 			<li role="presentation" ng-class="{active:tab=='Administrativos'}"><a
 				href ng-click="tab='Administrativos'"
-				ng-style="{'background-color':tab=='Administrativos' ? '#F5F5F5' : null}">
+				ng-style="{'background-color':tab=='Administrativos' ? '#E6EAE6' : null}">
 					<img src="images/admin-icon.png" style="width: 32px">Administrativos
 			</a></li>
 		</ul>
 		<div class="panel panel-default"
-			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #F5F5F5;"
+			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;"
 			ng-show="tab=='Aspirantes'">
 			<div class="row">La calidad y diversidad de nuestra oferta
 				académica desde bachillerato hasta posgrados incluyendo el Sistema
@@ -75,7 +81,7 @@
 			</div>
 		</div>
 		<div class="panel panel-default"
-			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #F5F5F5;"
+			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;"
 			ng-show="tab=='Alumnos'">
 			<div class="row">Los alumnos son la razón de ser de la
 				universidad. Nuestra prioridad en todos los niveles es una
@@ -106,7 +112,7 @@
 			</div>
 		</div>
 		<div class="panel panel-default"
-			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #F5F5F5;"
+			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;"
 			ng-show="tab=='Egresados'">
 			<div class="row">Los egresados y ex -alumnos tienen la
 				posibilidad de continuar conectados con la universidad, recibir
@@ -128,7 +134,7 @@
 			</div>
 		</div>
 		<div class="panel panel-default"
-			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #F5F5F5;"
+			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;"
 			ng-show="tab=='Academicos'">
 			<h4>Planteles</h4>
 			<a href="">PLANTEL JUAREZ NUEVO</a><br>
@@ -175,7 +181,7 @@
 
 		</div>
 		<div class="panel panel-default"
-			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #F5F5F5;"
+			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;"
 			ng-show="tab=='Administrativos'">
 			<div class="row">Las actividades administrativas acotan y
 				mantienen vigentes las políticas y procesos universitarios. Esta
@@ -210,7 +216,7 @@
 		</div>
 
 		<div class="panel panel-default"
-			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #F5F5F5;"
+			style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;"
 			ng-show="tab=='OfertaAcademica'">
 
 
@@ -233,9 +239,10 @@
 						<div class="col-sm-4">08PSU5031F</div>
 
 						<div class="col-sm-5">
-							<img src="images/suit-icon.png" alt="Administracion" style="width: 16px">
-							<a href="" data-toggle="modal" data-target="#modalLAE"> Lic.
-								En Administracion de Empresas </a>
+							<img src="images/suit-icon.png" alt="Administracion"
+								style="width: 16px"> <a href="" data-toggle="modal"
+								data-target="#modalLAE"> Lic. En Administracion de Empresas
+							</a>
 						</div>
 
 						<div class="col-sm-3">20121431</div>
@@ -244,9 +251,9 @@
 						<div class="col-sm-4">08PSU5031F</div>
 
 						<div class="col-sm-5">
-							<img src="images/chart-icon.png" alt="seguimiento" style="width: 16px">
-							<a href="" data-toggle="modal" data-target="#modalLCP"> Lic.
-								En Contaduria Publica </a>
+							<img src="images/chart-icon.png" alt="seguimiento"
+								style="width: 16px"> <a href="" data-toggle="modal"
+								data-target="#modalLCP"> Lic. En Contaduria Publica </a>
 						</div>
 
 						<div class="col-sm-3">20121432</div>
@@ -255,9 +262,9 @@
 						<div class="col-sm-4">08PSU5031F</div>
 
 						<div class="col-sm-5">
-							<img src="images/scale-icon.png" alt="seguimiento" style="width: 16px">
-							<a href="" data-toggle="modal" data-target="#modalLD"> Lic.
-								En Derecho </a>
+							<img src="images/scale-icon.png" alt="seguimiento"
+								style="width: 16px"> <a href="" data-toggle="modal"
+								data-target="#modalLD"> Lic. En Derecho </a>
 						</div>
 
 						<div class="col-sm-3">20121433</div>
@@ -291,8 +298,8 @@
 
 					<div class="row">
 						<div class="col-sm-4"></div>
-						<div class="col-sm-8">En 3 a&#241;os modalidad
-							mixta, presencial y virtual</div>
+						<div class="col-sm-8">En 3 a&#241;os modalidad mixta,
+							presencial y virtual</div>
 					</div>
 
 				</div>
@@ -404,10 +411,11 @@
 				</h4>
 				<br>
 
-				<p class="text-center">Clases mixtas de forma presencial y virtuales con sus respectivas
-					actividades (desarrollo de los contenidos, consignas de los
-					profesores, actividades de aprendizaje, actividades de
-					evaluaci&#243;n y de autoevaluaci&#243;n).</p>
+				<p class="text-center">Clases mixtas de forma presencial y
+					virtuales con sus respectivas actividades (desarrollo de los
+					contenidos, consignas de los profesores, actividades de
+					aprendizaje, actividades de evaluaci&#243;n y de
+					autoevaluaci&#243;n).</p>
 			</div>
 			<div class="col-sm-3">
 				<h4 class="text-center">
@@ -948,3 +956,4 @@
 			</div>
 		</div>
 	</div>
+</div>
