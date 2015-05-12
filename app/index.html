@@ -1,132 +1,107 @@
 <!doctype html>
 <html class="no-js">
+
 <head>
-<meta charset="utf-8">
-<title>CUPN</title>
-<meta name="description" content="Web Portal for CUPN university.">
-<meta name="viewport" content="width=device-width">
-<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-<!-- build:css(.) styles/vendor.css -->
-<!-- bower:css -->
-<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-<link rel="stylesheet" href="bower_components/slick.js/slick/slick.css" />
-<!-- endbower -->
-<!-- endbuild -->
-<!-- build:css(.tmp) styles/main.css -->
-<link rel="stylesheet" href="styles/main.css">
-<!-- endbuild -->
+    <meta charset="utf-8">
+    <title>CUPN</title>
+    <meta name="description" content="Web Portal for CUPN university.">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/slick.js/slick/slick.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
 </head>
+
 <body ng-app="cupnPortalApp" ng-controller="MainCtrl">
-	<!--[if lt IE 7]>
+    <!--[if lt IE 7]>
 <p class="browsehappy">Usted esta utilizando un explorador <strong>desactualizado</strong>.
   Por favor <a href="http://browsehappy.com/">actualize su explorador </a> para mejorar la experiencia con el sitio web.
 </p>
 <![endif]-->
-
-	<!-- Add your site or application content here -->
-
-
-	<img src="images/logo-ico.png"
-		style="width: 135px; display: block; position: fixed; top: 5px; left: 10px; z-index: 1031;" />
-	<img src="images/CUPN.png"
-		style="display: block; position: fixed; top: 38px; left: 130px; z-index: 1031;" />
-	<nav class="navbar navbar-default navbar-fixed-top"
-		style="min-height: 104px;">
-		<div class="container-fluid">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header" style="min-height: 104px;">
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target="#navbar-collapse-mainToolbar">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-
-			</div>
-
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse"
-				id="navbar-collapse-mainToolbar">
-				<div class="hidden-xs hidden-sm" style="width:100px;height:54px;"></div>
-				<ul class="nav navbar-nav navbar-right">
-
-					<li ng-class="{active:isActive('/')}"><a href="" ng-click="go('/');">Inicio</a></li>
-
-					<li role="presentation" class="dropdown"><a
-						class="dropdown-toggle" data-toggle="dropdown" data-target="#"
-						role="button" aria-expanded="false"> Plataformas <span
-							class="caret"></span>
-					</a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a ng-click="go('');"
-								href="http://centrouniversitariopasodelnorte.com/moodle/login/index.php"
-								target="_blank"> <img src="images/board-icon.png">
-									Plataforma Virtual Educativa
-							</a></li>
-							<li class="divider"></li>
-							<li><a ng-click="go('');"
-								href="http://centrouniversitariopasodelnorte.com/bibliotecas/cgi-bin/library.cgi"
-								target="_blank"> <img src="images/library-icon.png">
-									Biblioteca Virtual
-							</a></li>
-							<li class="divider"></li>
-							<li><a ng-click="go('');"
-								href="http://centrouniversitariopasodelnorte.com/mail"
-								target="_blank"> <img src="images/Mail-icon.png">
-									Correo Electrónico
-							</a></li>
-						</ul></li>
-					<li ng-class="{active:isActive('/about')}"><a
-						href="" ng-click="go('/about');">Acerca de</a></li>
-					<li ng-class="{active:isActive('/contactUs')}"><a
-						href="" ng-click="go('/contactUs');">Contacto</a></li>
-
-				</ul>
-			</div>
-			<!-- /.navbar-collapse -->
-		</div>
-		<!-- /.container-fluid -->
-	</nav>
-
-
-	<div style="clear: both" ng-view=""></div>
-
-	<div class="footer">
-		<a href="mailto:developers@inspiracode.net" class="pull-right"
-			style="color: #777; margin-right: 10px;">Powered by InspiraCode</a>
-	</div>
-
-
-	<!-- build:js(.) scripts/oldieshim.js -->
-	<!--[if lt IE 9]>
+    <!-- Add your site or application content here -->
+    <div class="container" style="max-width: none;">
+        <img src="images/logo-ico.png" style="width: 100px; display: block; position: absolute; top: 10px; left: 110px; z-index: 1031;" />
+        <img src="images/CUPN.png" style="display: block; position: absolute; top: 31px; left: 194px; z-index: 1031;" />
+        <nav class="navbar navbar-default" style="min-height: 104px; border-radius:0;">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header" style="min-height: 104px;">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-mainToolbar">
+                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-collapse-mainToolbar">
+                    <div class="hidden-xs hidden-sm" style="width:100px;height:54px;"></div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li ng-class="{active:isActive('/')}"><a href="" ng-click="go('/');">Inicio</a></li>
+                        <li role="presentation" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" role="button" aria-expanded="false"> Plataformas <span
+                                class="caret"></span>
+                        </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a ng-click="go('');" href="http://centrouniversitariopasodelnorte.com/moodle/login/index.php" target="_blank"> <img src="images/board-icon.png"> Plataforma Virtual Educativa
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a ng-click="go('');" href="http://centrouniversitariopasodelnorte.com/bibliotecas/cgi-bin/library.cgi" target="_blank"> <img src="images/library-icon.png"> Biblioteca Virtual
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a ng-click="go('');" href="http://centrouniversitariopasodelnorte.com/mail" target="_blank"> <img src="images/Mail-icon.png"> Correo Electrónico
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li ng-class="{active:isActive('/about')}"><a href="" ng-click="go('/about');">Acerca de</a></li>
+                        <li ng-class="{active:isActive('/contactUs')}"><a href="" ng-click="go('/contactUs');">Contacto</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+    <div style="clear: both" ng-view=""></div>
+    <div class="footer">
+        <a href="mailto:developers@inspiracode.net" class="pull-right" style="color: #777; margin-right: 10px;">Powered by InspiraCode</a>
+    </div>
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
 <script src="bower_components/es5-shim/es5-shim.js"></script>
 <script src="bower_components/json3/lib/json3.js"></script>
 <![endif]-->
-	<!-- endbuild -->
-
-	<!-- build:js(.) scripts/vendor.js -->
-	<!-- bower:js -->
-	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script src="bower_components/angular/angular.js"></script>
-	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-	<script src="bower_components/angular-animate/angular-animate.js"></script>
-	<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-	<script src="bower_components/angular-resource/angular-resource.js"></script>
-	<script src="bower_components/angular-route/angular-route.js"></script>
-	<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-	<script src="bower_components/angular-touch/angular-touch.js"></script>
-	<script src="bower_components/slick.js/slick/slick.min.js"></script>
-	<script src="bower_components/ng-resize/ngresize.js"></script>
-	<!-- endbower -->
-	<!-- endbuild -->
-
-	<!-- build:js({.tmp,app}) scripts/scripts.js -->
-	<script src="scripts/app.js"></script>
-	<script src="scripts/controllers/main.js"></script>
-	<script src="scripts/controllers/about.js"></script>
-	<script src="scripts/controllers/contactus.js"></script>
-	<script src="scripts/controllers/navigation.js"></script>
-	<!-- endbuild -->
-
+    <!-- endbuild -->
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/slick.js/slick/slick.min.js"></script>
+    <script src="bower_components/ng-resize/ngresize.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/contactus.js"></script>
+    <script src="scripts/controllers/navigation.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>
