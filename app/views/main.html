@@ -1,854 +1,1132 @@
-<div class="container" style="max-width: none;  margin-top: -20px;">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        </ol>
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="images/slider/la_X.jpg" alt="200px">
-                <div class="carousel-caption">....</div>
-            </div>
-            <div class="item">
-                <img src="images/slider/la_X.jpg" alt="200px">
-                <div class="carousel-caption">...</div>
-            </div>
-        </div>
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span>
-        </a>
-    </div>
-    <br>
-    <div>
-        <ul class="nav nav-tabs">
-            <li role="presentation" ng-class="{active:tab=='OfertaAcademica'}">
-                <a href ng-click="tab='OfertaAcademica'" ng-style="{'background-color':tab=='OfertaAcademica' ? '#E6EAE6' : null}">
-                    <img src="images/education-icon.png" style="width: 32px"> Oferta Academica
-                </a>
-            </li>
-            <li role="presentation" ng-class="{active:tab=='Aspirantes'}">
-                <a href ng-click="tab='Aspirantes'" ng-style="{'background-color':tab=='Aspirantes' ? '#E6EAE6' : null}"><img src="images/groups-icon.png" style="width: 32px"> Aspirantes</a>
-            </li>
-            <li role="presentation" ng-class="{active:tab=='Alumnos'}">
-                <a href ng-click="tab='Alumnos'" ng-style="{'background-color':tab=='Alumnos' ? '#E6EAE6' : null}">
-                    <img src="images/graduated-icon.png"> Alumnos
-                </a>
-            </li>
-            <li role="presentation" ng-class="{active:tab=='Docentes'}">
-                <a href ng-click="tab='Docentes'" ng-style="{'background-color':tab=='Docentes' ? '#E6EAE6' : null}">
-                    <img src="images/Teachers-icon.png" style="width: 32px">Docentes
-                </a>
-            </li>
-            <li style="display: none;" role="presentation" ng-class="{active:tab=='Egresados'}"><a href ng-click="tab='Egresados'" ng-style="{'background-color':tab=='Egresados' ? '#E6EAE6' : null}">Egresados</a></li>
-            <li role="presentation" ng-class="{active:tab=='Administrativos'}">
-                <a href ng-click="tab='Administrativos'" ng-style="{'background-color':tab=='Administrativos' ? '#E6EAE6' : null}">
-                    <img src="images/admin-icon.png" style="width: 32px">Administrativos
-                </a>
-            </li>
-            <li role="presentation" ng-class="{active:tab=='Planes'}">
-                <a href ng-click="tab='Planes'" ng-style="{'background-color':tab=='Planes' ? '#E6EAE6' : null}">
-                    <img src="images/Programs-icon.png" style="width: 32px">Planes y Programas
-                </a>
-            </li>
-            <li role="presentation" ng-class="{active:tab=='Modalidad y Horarios'}">
-                <a href ng-click="tab='Academicos'" ng-style="{'background-color':tab=='Academicos' ? '#E6EAE6' : null}">
-                    <img src="images/schedule-icon.png"> Modalidad y Horarios
-                </a>
-            </li>
-        </ul>
-        <div class="panel panel-default" style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;" ng-show="tab=='Aspirantes'">
-            <div class="row">La calidad y diversidad de nuestra oferta académica desde bachillerato hasta posgrados incluyendo el Sistema de Universidad Virtual es motivo de orgullo para toda la Red Universitaria. Conócela y entérate de los requisitos de admisión. La siguiente información puede ser útil para ti:</div>
-            <br>
-            <div class="row">
-                <div class="col-sm-6">
-                    <img src="images/Registro-Tramites-icon.png" alt="Registro-Tramite" style="width: 32px"> <a href="" data-toggle="modal" data-target="#modalADMASP">Requisitos de admisi&#243n</a>
-                    <p>Pasos a seguir, documentaci&#243n requerida y entrega de documentaci&#243n.
-                    </p>
-                    <img src="images/seguimiento-icon.png" alt="seguimiento" style="width: 32px"> <a href="#">Seguimiento de tramites</a>
-                    <br>
-                    <p>Para dar seguimiento a tu trámite de ingreso.</p>
-                    <a href="#">Documentación requerida</a>
-                    <br>
-                    <p>Para todos los niveles, desde bachillerato hasta posgrado.</p>
-                </div>
-                <div class="col-sm-6">
-                    <img src="images/education-icon.png" style="width: 32px"> <a href="" ng-click="tab='OfertaAcademica'">Oferta Académica</a>
-                    <br>
-                    <p>Catálogo de programas educativos.</p>
-                    <img src="images/todays-icon.png" alt="calendario" style="width: 32px"> <a href="#">Calendarios Oficiales</a>
-                    <br>
-                    <p>Escolares y de trámites para aspirantes.</p>
-                    <a href="#">Estudios realizados en el extranjero</a>
-                    <br>
-                    <p>Consideraciones y requisitos.</p>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default" style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;" ng-show="tab=='Alumnos'">
-            <div class="row">Los alumnos son la razón de ser de la universidad. Nuestra prioridad en todos los niveles es una educación integral con perspectivas de sustentabilidad y conciencia social.</div>
-            <h4>Servicios para alumnos</h4>
-            <div class="row">
-                <div class="col-sm-4">
-                    <a href="#">Taller de estrategias básicas de aprendizaje</a>
-                    <br>
-                    <a href="#">Difusión y asesoría en becas fuera de la
-					Universidad de Guadalajara</a>
-                    <br> <a href="#">Asesoría en
-					derechos y obligaciones</a>
-                    <br> <a href="#">Universidad
-					saludable (Afiliación- PrevenIMSS)</a>
-                    <br>
-                </div>
-                <div class="col-sm-4">
-                    <a href="#">Trámites y control documental</a>
-                    <br> <a href="#">Ceremonia
-					de Reconocimiento a Estudiantes Sobresalientes (CRES)</a>
-                    <br> <a href="#">Torneos deportivos intercentros</a>
-                    <br> <a href="#">Programa
-					Nacional de Becas para la Educación Superior PRONABES</a>
-                    <br>
-                </div>
-                <div class="col-sm-4">
-                    <a href="#">Oficina de conexión para prácticas profesionales
-					en el extranjero</a>
-                    <br> <a href="#">Apoyos extracurriculares</a>
-                    <br>
-                    <a href="#">Ligas deportivas interprepas</a>
-                    <br> <a href="#">Becas
-					Proulex</a>
-                    <br>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default" style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;" ng-show="tab=='Egresados'">
-            <div class="row">Los egresados y ex -alumnos tienen la posibilidad de continuar conectados con la universidad, recibir beneficios adicionales y retribuir a la comunidad.</div>
-            <h4>Servicios para Egresados</h4>
-            <div class="row">
-                <div class="col-sm-4">
-                    <a href="#">Red de bolsa de trabajo</a>
-                    <br> <a href="#">Oficina
-					de conexión para prácticas profesionales en el extranjero</a>
-                    <br>
-                </div>
-                <div class="col-sm-4">
-                    <a href="#">Credencial de egresados</a>
-                    <br> <a href="#">Difusión
-					y asesoría en becas fuera de la Universidad de Guadalajara</a>
-                    <br>
-                </div>
-                <div class="col-sm-4">
-                    <a href="#">Trámites y control documental</a>
-                    <br>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default" style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;" ng-show="tab=='Academicos'">
-            <h4>Planteles</h4>
-            <a href="">PLANTEL JUAREZ NUEVO</a>
-            <br>
-            <div class="row">
-                <div class="col-sm-4">
-                    MODALIDAD MIXTA
-                    <br>TURNOS EJECUTIVOS
-                </div>
-                <div class="col-sm-8">
-                    <a href="">Oferta Acad&#233;mica</a>
-                    <br> Lic. En Administraci&#243;n de Empresas
-                    <br> Lic. En Contaduria P&#250;blica
-                    <br> Lic. En Derecho
-                    <br> Asistencia Educativa
-                    <br> Preparatoria Tetramestral
-                    <br> Diplomados
-                </div>
-            </div>
-            <a href="#">PLANTEL ZARAGOZA </a>
-            <br>
-            <div class="row">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-8">
-                    <a href="">Oferta Acad&#233;mica</a>
-                    <br> Aux. Tec. En Enfermeria
-                    <br> Aux. Tec. En Terapia Fisica
-                    <br> Aux. Tec. En Urgencias Medicas
-                    <br> Preparatoria semestral
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default" style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;" ng-show="tab=='Administrativos'">
-            <div class="row">Las actividades administrativas acotan y mantienen vigentes las políticas y procesos universitarios. Esta sección te mantendrá informado sobre las actividades y procesos administrativos.
-            </div>
-            <h4>Circulares</h4>
-            <a href="#">Circular N° 16</a>
-            <br>
-            <p>LUNES 17 de Noviembre de 2014, (en conmemoración de 20 de noviembre), será día de descanso obligatorio para el personal Académico y Administrativo (cláusulas 33 y 61 de los Contratos Colectivos de Trabajo celebrados con el STAUdeG y SUTUdeG, respectivamente).
-            </p>
-            <a href="#">Circular N° 14</a>
-            <br>
-            <p>
-                Lunes 15 de septiembre de 2014, Día de descanso obligatorio para personal académico y administrativo de la UdeG, en sustitución del 12 de octubre, a solicitud del Sindicato de Trabajadores Académicos de la UdeG y del Sindicato Único de Trabajadores de la
-                <UdeG class=""></UdeG>
-            </p>
-            <a href="#">Circular N° 13</a>
-            <br>
-            <p>MARTES 16 de Septiembre de 2014: Día de descanso obligatorio para el personal académico y administrativo de la UdeG (Cláusulas 33 y 61 de los Contratos Colectivos de Trabajo celebrados con el STAUdeG y SUTUdeG, respectivamente).</p>
-        </div>
-        <div class="panel panel-default" style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;" ng-show="tab=='Planes'">
-            <h2>PROGRAMAS DE ESTUDIO</h2>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4>Preparatoria</h4>
-                </div>
-                <div class="panel-body">
-                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                PRIMERO <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/1er_SEMESTRE/Matematicas_I_biblio2014.pdf" target="_blank">Programa de Matem&aacute;ticas I</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/1er_SEMESTRE/Quimica_I_biblio2014.pdf" target="_blank">Programa de Qu&iacute;mica I</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/1er_SEMESTRE/Introd_Ciencias_Sociales_biblio2014.pdf" target="_blank">Programa de Introducci&oacute;n a las
-									Ciencias Sociales</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/1er_SEMESTRE/Taller_Lectura_Redaccion_I_biblio2014.pdf" target="_blank">Programa de Taller de Lectura y
-									Redacci&oacute;n I</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/1er_SEMESTRE/Informatica_I_biblio2014.pdf" target="_blank">Programa de Inform&aacute;tica I</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/1er_SEMESTRE/Lengua_Adicional_Espanol_I_biblio2014.pdf" target="_blank">Programa de Lengua Adicional al Espa&#241;ol
-									I</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/1er_SEMESTRE/Etica_Valores_I_biblio2014.pdf" target="_blank">Programa de &Eacute;tica y Valores I</a></li>
-                            </ul>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                SEGUNDO <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/2do_SEMESTRE/Matematicas_II_biblio2014.pdf" target="_blank">Programa de Matema&aacute;ticas II</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/2do_SEMESTRE/Quimica_II_biblio2014.pdf" target="_blank"> Programa de Qu&iacute;mica II </a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/2do_SEMESTRE/Historia_Mexico_I_biblio2014.pdf" target="_blank">Historia de M&eacute;xico I</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/2do_SEMESTRE/Taller_Lectura_Redaccion_II_biblio2014.pdf" target="_blank">Programa de Taller de Lectura y Redacci&oacute;n II</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/2do_SEMESTRE/Informtica_II_biblio2014.pdf" target="_blank">Programa de Inform&aacute;tica II</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/2do_SEMESTRE/Lengua_Adicional_Espanol_II_biblicomp2014.pdf" target="_blank">Programa de Lengua Adicional al Espa&#241;ol II</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/2do_SEMESTRE/Etica_Valores_II_biblio2014.pdf" target="_blank"> Programa de &Eacute;tica y Valores II</a></li>
-                            </ul>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                TERCERO <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/3er_SEMESTRE/Matematicas_III_biblio2014.pdf" target="_blank">Programa de Matem&aacute;ticas III</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/3er_SEMESTRE/Fisica_I_biblio2014.pdf" target="_blank">Programa de F&iacute;sica I</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/3er_SEMESTRE/Historia_Mexico_I_biblio2014.pdf" target="_blank">Programa de Historia de M&eacute;xico II</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/3er_SEMESTRE/Literatura_I_bibliografia_2015.pdf" target="_blank">Programa de Literatura I</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/3er_SEMESTRE/Lengua_Adicional_Espanol_III_biblicom2014a.pdf" target="_blank">Programa de Lengua Adicional al Espa&#241;ol III</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/3er_SEMESTRE/Biologia_I_biblio2014.pdf" target="_blank">Programa de Biolog&iacute;a I</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                CUARTO <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/4to_SEMESTRE/Matematicas_IV_biblio2014.pdf" target="_blank">Programa de Matem&aacute;ticas IV</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/4to_SEMESTRE/Biologia_II_biblio2014.pdf" target="_blank">Programa de Biolog&iacute;a II</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/4to_SEMESTRE/Fisica_II_biblio2014.pdf" target="_blank">Programa de F&iacute;sica II</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/4to_SEMESTRE/Estructura_Socioeconomica_Mexico_biblio2014.pdf" target="_blank">Programa de Estructura Socioecon&oacute;mica de M&eacute;xico</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/4to_SEMESTRE/Literatura_II_bibliografia_2015.pdf" target="_blank">Programa de Literatura II</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/4to_SEMESTRE/Lengua_Adicional_Espanol_IV_bibliocomp2014.pdf" target="_blank">Programa de Lengua Adicional al Espa&#241;ol IV</a></li>
-                            </ul>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                QUINTO <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/5to_SEMESTRE/Geografia_biblio2014.pdf" target="_blank"> Geograf&iacute;a </a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/5to_SEMESTRE/Historia_Universal_Contemporanea_bibliografia_2015.pdf" target="_blank">Historia Universal Contempor&aacute;nea</a></li>
-                            </ul>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                SEXTO <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/6to_SEMESTRE/Ecologia_Medio_Ambiente_biblio2014.pdf" target="_blank">Ecolog&iacute;a y Medio Ambiente</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/6to_SEMESTRE/Filosofia_biblio2014.pdf" target="_blank">Filosof&iacute;a</a></li>
-                                <li><a href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/cfp_6sem/METODOLOGIA_INVESTIGACIONII.pdf" target="_blank"> Metodolog&iacute;a de la Investigaci&oacute;n</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4>Profesional</h4>
-                </div>
-                <div class="panel-body">
-                    <div class="btn-group btn-group-justified" role="group" aria-label="..."></div>
-                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                ADMINISTRACION DE EMPRESAS <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                CONTADURIA PUBLICA <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </div>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                DERECHO <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default" style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;" ng-show="tab=='Docentes'">
-            <h2>Maestros</h2>
-            <p>Datos de maestros en curso.</p>
-            <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Profesion</th>
-                            <th>Nombre</th>
-                            <th>Correo Electronico</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Anna</td>
-                            <td>Anna</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Debbie</td>
-                            <td>Anna</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>John</td>
-                            <td>Anna</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+
+<div id="carousel-example-generic" class="carousel slide"
+	data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#carousel-example-generic" data-slide-to="0"
+			class="active"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	</ol>
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner" role="listbox">
+		<div class="item active">
+			<img src="images/slider/la_X.jpg" alt="300px" with="150px"
+				heigth=150y>
+			<div class="carousel-caption">....</div>
+		</div>
+		<div class="item">
+			<img src="images/slider/la_X.jpg" alt="300px">
+			<div class="carousel-caption">...</div>
+		</div>
+	</div>
+	<!-- Controls -->
+	<a class="left carousel-control" href="#carousel-example-generic"
+		role="button" data-slide="prev"> <span
+		class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span
+		class="sr-only">Previous</span>
+	</a> <a class="right carousel-control" href="#carousel-example-generic"
+		role="button" data-slide="next"> <span
+		class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span
+		class="sr-only">Next</span>
+	</a>
 </div>
-<section id="services" class="service-item" style="padding:70px 0;" ng-show="tab=='OfertaAcademica'">
-    <div class="container" style="max-width:none;">
-        <div class="center wow fadeInDown animated" style="visibility: visible;">
-            <h2 style="color: #fff;">Nivel Profesional</h2>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 col-md-4">
-                <div class="media services-wrap wow fadeInDown animated" data-toggle="modal" data-target="#modalLAE" style="visibility: visible;">
-                    <div class="pull-left">
-                        <img class="img-responsive" src="images/services/services1.png">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">Lic. En Administración de Empresas</h3>
-                        <h6>Clave de Incorporación</h6>
-                        <p>08PSU5031F</p>
-                        <h6>Acuerdo</h6>
-                        <p>20121431</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="media services-wrap wow fadeInDown animated" style="visibility: visible;" data-toggle="modal" data-target="#modalLCP">
-                    <div class="pull-left">
-                        <img class="img-responsive" src="images/services/services2.png">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">Lic. En Contaduria Publica</h3>
-                        <h6>Clave de Incorporación</h6>
-                        <p>08PSU5031F</p>
-                        <h6>Acuerdo</h6>
-                        <p>20121432</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="media services-wrap wow fadeInDown animated" style="visibility: visible;" data-toggle="modal" data-target="#modalLD">
-                    <div class="pull-left">
-                        <img class="img-responsive" src="images/services/services3.png">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">Lic. En Derecho<br><br></h3>
-                        <h6>Clave de Incorporación</h6>
-                        <p>08PSU5031F</p>
-                        <h6>Acuerdo</h6>
-                        <p>20121433</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/.row-->
-        <br>
-        <br>
-        <div class="center wow fadeInDown animated" style="visibility: visible;">
-            <h2 style="color: #fff;">Nivel Medio Superior</h2>
-        </div>
-        <div class="row">
-            <div class="col-sm-5 col-sm-offset-1">
-                <div class="media services-wrap wow fadeInDown animated" data-toggle="modal" data-target="#modalBACH" style="visibility: visible;">
-                    <div class="pull-left">
-                        <img class="img-responsive" src="images/services/services1.png">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">Bachillerato General Plan semestral</h3>
-                        <h6>Clave de Incorporación</h6>
-                        <p>08PBH3702W</p>
-                        <p>En modalidad mixta, presencial y virtual</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-5">
-                <div class="media services-wrap wow fadeInDown animated" style="visibility: visible;" data-toggle="modal" data-target="#modalBACH">
-                    <div class="pull-left">
-                        <img class="img-responsive" src="images/services/services2.png">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">Bachillerato General Plan Tetramestral</h3>
-                        <h6>Clave de Incorporación</h6>
-                        <p>08PBH3702W</p>
-                        <p>En 2 años modalidad mixta, presencial y virtual</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/.row-->
-        <br>
-        <br>
-        <div class="center wow fadeInDown animated" style="visibility: visible;">
-            <h2 style="color: #fff;">Diplomados</h2>
-        </div>
-        <div class="row">
-            <div class="col-sm-5 col-sm-offset-1">
-                <div class="media services-wrap wow fadeInDown animated" style="visibility: visible;" data-toggle="modal" data-target="#modalAE">
-                    <div class="pull-left">
-                        <img class="img-responsive" src="images/services/services1.png">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">Asistencia Educativa</h3>
-                        <h6>Clave de Incorporación</h6>
-                        <p>08PBT0452H</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-5">
-                <div class="media services-wrap wow fadeInDown animated" style="visibility: visible;" data-toggle="modal" data-target="#modalAFS">
-                    <div class="pull-left">
-                        <img class="img-responsive" src="images/services/services2.png">
-                    </div>
-                    <div class="media-body">
-                        <h3 class="media-heading">Asistencia Familiar y de Salud</h3>
-                        <h6>Clave de Incorporación</h6>
-                        <p>08PBT0452H</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/.row-->
-    </div>
-    <!--/.container-->
+<br>
+<div>
+	<ul class="nav nav-tabs">
+		<li role="presentation" ng-class="{active:tab=='OfertaAcademica'}">
+			<a href ng-click="tab='OfertaAcademica'"
+			ng-style="{'background-color':tab=='OfertaAcademica' ? '#E6EAE6' : null}">
+				<img src="images/education-icon.png" style="width: 32px">
+				Oferta Academica
+		</a>
+		</li>
+		<li role="presentation" ng-class="{active:tab=='Aspirantes'}"><a
+			href ng-click="tab='Aspirantes'"
+			ng-style="{'background-color':tab=='Aspirantes' ? '#E6EAE6' : null}"><img
+				src="images/groups-icon.png" style="width: 32px"> Aspirantes</a></li>
+		<li role="presentation" ng-class="{active:tab=='Alumnos'}"><a
+			href ng-click="tab='Alumnos'"
+			ng-style="{'background-color':tab=='Alumnos' ? '#E6EAE6' : null}">
+				<img src="images/graduated-icon.png"> Alumnos
+		</a></li>
+		<li role="presentation" ng-class="{active:tab=='Docentes'}"><a
+			href ng-click="tab='Docentes'"
+			ng-style="{'background-color':tab=='Docentes' ? '#E6EAE6' : null}">
+				<img src="images/Teachers-icon.png" style="width: 32px">Docentes
+		</a></li>
+		<li style="display: none;" role="presentation"
+			ng-class="{active:tab=='Egresados'}"><a href
+			ng-click="tab='Egresados'"
+			ng-style="{'background-color':tab=='Egresados' ? '#E6EAE6' : null}">Egresados</a></li>
+		<li role="presentation" ng-class="{active:tab=='Administrativos'}">
+			<a href ng-click="tab='Administrativos'"
+			ng-style="{'background-color':tab=='Administrativos' ? '#E6EAE6' : null}">
+				<img src="images/admin-icon.png" style="width: 32px">Administrativos
+		</a>
+		</li>
+		<li role="presentation" ng-class="{active:tab=='Planes'}"><a href
+			ng-click="tab='Planes'"
+			ng-style="{'background-color':tab=='Planes' ? '#E6EAE6' : null}">
+				<img src="images/Programs-icon.png" style="width: 32px">Planes
+				y Programas
+		</a></li>
+		<li role="presentation"
+			ng-class="{active:tab=='Modalidad y Horarios'}"><a href
+			ng-click="tab='Academicos'"
+			ng-style="{'background-color':tab=='Academicos' ? '#E6EAE6' : null}">
+				<img src="images/schedule-icon.png"> Modalidad y Horarios
+		</a></li>
+	</ul>
+	<div class="panel panel-default"
+		style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;"
+		ng-show="tab=='Aspirantes'">
+		<div class="row">La calidad y diversidad de nuestra oferta
+			académica desde bachillerato hasta posgrados incluyendo el Sistema
+			de Universidad Virtual es motivo de orgullo para toda la Red
+			Universitaria. Conócela y entérate de los requisitos de admisión.
+			La siguiente información puede ser útil para ti:</div>
+		<br>
+		<div class="row">
+			<div class="col-sm-6">
+				<img src="images/Registro-Tramites-icon.png" alt="Registro-Tramite"
+					style="width: 32px"> <a href="" data-toggle="modal"
+					data-target="#modalADMASP">Requisitos de admisi&#243n</a>
+				<p>Pasos a seguir, documentaci&#243n requerida y entrega de
+					documentaci&#243n.</p>
+				<img src="images/seguimiento-icon.png" alt="seguimiento"
+					style="width: 32px"> <a href="#">Seguimiento de tramites</a>
+				<br>
+				<p>Para dar seguimiento a tu trámite de ingreso.</p>
+				<a href="#">Documentación requerida</a> <br>
+				<p>Para todos los niveles, desde bachillerato hasta posgrado.</p>
+			</div>
+			<div class="col-sm-6">
+				<img src="images/education-icon.png" style="width: 32px"> <a
+					href="" ng-click="tab='OfertaAcademica'">Oferta Académica</a> <br>
+				<p>Catálogo de programas educativos.</p>
+				<img src="images/todays-icon.png" alt="calendario"
+					style="width: 32px"> <a href="#">Calendarios Oficiales</a> <br>
+				<p>Escolares y de trámites para aspirantes.</p>
+				<a href="#">Estudios realizados en el extranjero</a> <br>
+				<p>Consideraciones y requisitos.</p>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default"
+		style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;"
+		ng-show="tab=='Alumnos'">
+		<div class="row">Los alumnos son la razón de ser de la
+			universidad. Nuestra prioridad en todos los niveles es una educación
+			integral con perspectivas de sustentabilidad y conciencia social.</div>
+		<h4>Servicios para alumnos</h4>
+		<div class="row">
+			<div class="col-sm-4">
+				<a href="#">Taller de estrategias básicas de aprendizaje</a> <br>
+				<a href="#">Difusión y asesoría en becas fuera de la
+					Universidad de Guadalajara</a> <br> <a href="#">Asesoría en
+					derechos y obligaciones</a> <br> <a href="#">Universidad
+					saludable (Afiliación- PrevenIMSS)</a> <br>
+			</div>
+			<div class="col-sm-4">
+				<a href="#">Trámites y control documental</a> <br> <a href="#">Ceremonia
+					de Reconocimiento a Estudiantes Sobresalientes (CRES)</a> <br> <a
+					href="#">Torneos deportivos intercentros</a> <br> <a href="#">Programa
+					Nacional de Becas para la Educación Superior PRONABES</a> <br>
+			</div>
+			<div class="col-sm-4">
+				<a href="#">Oficina de conexión para prácticas profesionales
+					en el extranjero</a> <br> <a href="#">Apoyos extracurriculares</a>
+				<br> <a href="#">Ligas deportivas interprepas</a> <br> <a
+					href="#">Becas Proulex</a> <br>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default"
+		style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;"
+		ng-show="tab=='Egresados'">
+		<div class="row">Los egresados y ex -alumnos tienen la
+			posibilidad de continuar conectados con la universidad, recibir
+			beneficios adicionales y retribuir a la comunidad.</div>
+		<h4>Servicios para Egresados</h4>
+		<div class="row">
+			<div class="col-sm-4">
+				<a href="#">Red de bolsa de trabajo</a> <br> <a href="#">Oficina
+					de conexión para prácticas profesionales en el extranjero</a> <br>
+			</div>
+			<div class="col-sm-4">
+				<a href="#">Credencial de egresados</a> <br> <a href="#">Difusión
+					y asesoría en becas fuera de la Universidad de Guadalajara</a> <br>
+			</div>
+			<div class="col-sm-4">
+				<a href="#">Trámites y control documental</a> <br>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default"
+		style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;"
+		ng-show="tab=='Academicos'">
+		<h4>Planteles</h4>
+		<a href="">PLANTEL JUAREZ NUEVO</a> <br>
+		<div class="row">
+			<div class="col-sm-4">
+				MODALIDAD MIXTA <br>TURNOS EJECUTIVOS
+			</div>
+			<div class="col-sm-8">
+				<a href="">Oferta Acad&#233;mica</a> <br> Lic. En
+				Administraci&#243;n de Empresas <br> Lic. En Contaduria
+				P&#250;blica <br> Lic. En Derecho <br> Asistencia
+				Educativa <br> Preparatoria Tetramestral <br> Diplomados
+			</div>
+		</div>
+		<a href="#">PLANTEL ZARAGOZA </a> <br>
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-8">
+				<a href="">Oferta Acad&#233;mica</a> <br> Aux. Tec. En
+				Enfermeria <br> Aux. Tec. En Terapia Fisica <br> Aux. Tec.
+				En Urgencias Medicas <br> Preparatoria semestral
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default"
+		style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;"
+		ng-show="tab=='Administrativos'">
+		<div class="row">Las actividades administrativas acotan y
+			mantienen vigentes las políticas y procesos universitarios. Esta
+			sección te mantendrá informado sobre las actividades y procesos
+			administrativos.</div>
+		<h4>Circulares</h4>
+		<a href="#">Circular N° 16</a> <br>
+		<p>LUNES 17 de Noviembre de 2014, (en conmemoración de 20 de
+			noviembre), será día de descanso obligatorio para el personal
+			Académico y Administrativo (cláusulas 33 y 61 de los Contratos
+			Colectivos de Trabajo celebrados con el STAUdeG y SUTUdeG,
+			respectivamente).</p>
+		<a href="#">Circular N° 14</a> <br>
+		<p>
+			Lunes 15 de septiembre de 2014, Día de descanso obligatorio para
+			personal académico y administrativo de la UdeG, en sustitución del
+			12 de octubre, a solicitud del Sindicato de Trabajadores Académicos
+			de la UdeG y del Sindicato Único de Trabajadores de la
+			<UdeG class=""></UdeG>
+		</p>
+		<a href="#">Circular N° 13</a> <br>
+		<p>MARTES 16 de Septiembre de 2014: Día de descanso obligatorio
+			para el personal académico y administrativo de la UdeG (Cláusulas
+			33 y 61 de los Contratos Colectivos de Trabajo celebrados con el
+			STAUdeG y SUTUdeG, respectivamente).</p>
+	</div>
+	<div class="panel panel-default"
+		style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;"
+		ng-show="tab=='Planes'">
+		<h2>PROGRAMAS DE ESTUDIO</h2>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4>Preparatoria</h4>
+			</div>
+			<div class="panel-body">
+				<div class="btn-group btn-group-justified" role="group"
+					aria-label="...">
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default dropdown-toggle"
+							data-toggle="dropdown" aria-expanded="false">
+							PRIMERO <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/1er_SEMESTRE/Matematicas_I_biblio2014.pdf"
+								target="_blank">Programa de Matem&aacute;ticas I</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/1er_SEMESTRE/Quimica_I_biblio2014.pdf"
+								target="_blank">Programa de Qu&iacute;mica I</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/1er_SEMESTRE/Introd_Ciencias_Sociales_biblio2014.pdf"
+								target="_blank">Programa de Introducci&oacute;n a las
+									Ciencias Sociales</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/1er_SEMESTRE/Taller_Lectura_Redaccion_I_biblio2014.pdf"
+								target="_blank">Programa de Taller de Lectura y
+									Redacci&oacute;n I</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/1er_SEMESTRE/Informatica_I_biblio2014.pdf"
+								target="_blank">Programa de Inform&aacute;tica I</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/1er_SEMESTRE/Lengua_Adicional_Espanol_I_biblio2014.pdf"
+								target="_blank">Programa de Lengua Adicional al Espa&#241;ol
+									I</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/1er_SEMESTRE/Etica_Valores_I_biblio2014.pdf"
+								target="_blank">Programa de &Eacute;tica y Valores I</a></li>
+						</ul>
+					</div>
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default dropdown-toggle"
+							data-toggle="dropdown" aria-expanded="false">
+							SEGUNDO <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/2do_SEMESTRE/Matematicas_II_biblio2014.pdf"
+								target="_blank">Programa de Matema&aacute;ticas II</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/2do_SEMESTRE/Quimica_II_biblio2014.pdf"
+								target="_blank"> Programa de Qu&iacute;mica II </a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/2do_SEMESTRE/Historia_Mexico_I_biblio2014.pdf"
+								target="_blank">Historia de M&eacute;xico I</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/2do_SEMESTRE/Taller_Lectura_Redaccion_II_biblio2014.pdf"
+								target="_blank">Programa de Taller de Lectura y
+									Redacci&oacute;n II</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/2do_SEMESTRE/Informtica_II_biblio2014.pdf"
+								target="_blank">Programa de Inform&aacute;tica II</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/2do_SEMESTRE/Lengua_Adicional_Espanol_II_biblicomp2014.pdf"
+								target="_blank">Programa de Lengua Adicional al Espa&#241;ol
+									II</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/2do_SEMESTRE/Etica_Valores_II_biblio2014.pdf"
+								target="_blank"> Programa de &Eacute;tica y Valores II</a></li>
+						</ul>
+					</div>
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default dropdown-toggle"
+							data-toggle="dropdown" aria-expanded="false">
+							TERCERO <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/3er_SEMESTRE/Matematicas_III_biblio2014.pdf"
+								target="_blank">Programa de Matem&aacute;ticas III</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/3er_SEMESTRE/Fisica_I_biblio2014.pdf"
+								target="_blank">Programa de F&iacute;sica I</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/3er_SEMESTRE/Historia_Mexico_I_biblio2014.pdf"
+								target="_blank">Programa de Historia de M&eacute;xico II</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/3er_SEMESTRE/Literatura_I_bibliografia_2015.pdf"
+								target="_blank">Programa de Literatura I</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/3er_SEMESTRE/Lengua_Adicional_Espanol_III_biblicom2014a.pdf"
+								target="_blank">Programa de Lengua Adicional al Espa&#241;ol
+									III</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/3er_SEMESTRE/Biologia_I_biblio2014.pdf"
+								target="_blank">Programa de Biolog&iacute;a I</a></li>
+						</ul>
+					</div>
+				</div>
+				<br>
+				<div class="btn-group btn-group-justified" role="group"
+					aria-label="...">
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default dropdown-toggle"
+							data-toggle="dropdown" aria-expanded="false">
+							CUARTO <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/4to_SEMESTRE/Matematicas_IV_biblio2014.pdf"
+								target="_blank">Programa de Matem&aacute;ticas IV</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/4to_SEMESTRE/Biologia_II_biblio2014.pdf"
+								target="_blank">Programa de Biolog&iacute;a II</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/4to_SEMESTRE/Fisica_II_biblio2014.pdf"
+								target="_blank">Programa de F&iacute;sica II</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/4to_SEMESTRE/Estructura_Socioeconomica_Mexico_biblio2014.pdf"
+								target="_blank">Programa de Estructura Socioecon&oacute;mica
+									de M&eacute;xico</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/4to_SEMESTRE/Literatura_II_bibliografia_2015.pdf"
+								target="_blank">Programa de Literatura II</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/4to_SEMESTRE/Lengua_Adicional_Espanol_IV_bibliocomp2014.pdf"
+								target="_blank">Programa de Lengua Adicional al Espa&#241;ol
+									IV</a></li>
+						</ul>
+					</div>
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default dropdown-toggle"
+							data-toggle="dropdown" aria-expanded="false">
+							QUINTO <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/5to_SEMESTRE/Geografia_biblio2014.pdf"
+								target="_blank"> Geograf&iacute;a </a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/5to_SEMESTRE/Historia_Universal_Contemporanea_bibliografia_2015.pdf"
+								target="_blank">Historia Universal Contempor&aacute;nea</a></li>
+						</ul>
+					</div>
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default dropdown-toggle"
+							data-toggle="dropdown" aria-expanded="false">
+							SEXTO <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/6to_SEMESTRE/Ecologia_Medio_Ambiente_biblio2014.pdf"
+								target="_blank">Ecolog&iacute;a y Medio Ambiente</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/6to_SEMESTRE/Filosofia_biblio2014.pdf"
+								target="_blank">Filosof&iacute;a</a></li>
+							<li><a
+								href="http://www.dgb.sep.gob.mx/02-m1/03-iacademica/01-programasdeestudio/cfp_6sem/METODOLOGIA_INVESTIGACIONII.pdf"
+								target="_blank"> Metodolog&iacute;a de la
+									Investigaci&oacute;n</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4>Profesional</h4>
+			</div>
+			<div class="panel-body">
+				<div class="btn-group btn-group-justified" role="group"
+					aria-label="..."></div>
+				<div class="btn-group btn-group-justified" role="group"
+					aria-label="...">
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default dropdown-toggle"
+							data-toggle="dropdown" aria-expanded="false">
+							ADMINISTRACION DE EMPRESAS <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default dropdown-toggle"
+							data-toggle="dropdown" aria-expanded="false">
+							CONTADURIA PUBLICA <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+					<div class="btn-group" role="group">
+						<button type="button" class="btn btn-default dropdown-toggle"
+							data-toggle="dropdown" aria-expanded="false">
+							DERECHO <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default"
+		style="border-top: 0; border-radius: 0; min-height: 100px; padding: 20px; background-color: #E6EAE6;"
+		ng-show="tab=='Docentes'">
+		<h2>Maestros</h2>
+		<p>Datos de maestros en curso.</p>
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Profesion</th>
+						<th>Nombre</th>
+						<th>Correo Electronico</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Anna</td>
+						<td>Anna</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Debbie</td>
+						<td>Anna</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>John</td>
+						<td>Anna</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<section id="services" class="service-item" style="padding: 70px 0;"
+	ng-show="tab=='OfertaAcademica'">
+	<div class="container" style="max-width: none;">
+		<div class="center wow fadeInDown animated"
+			style="visibility: visible;">
+			<h2 style="color: #fff;">Oferta Academica</h2>
+		</div>
+		<div class="row">
+			<div class="col-sm-6 col-md-4">
+				<div class="media services-wrap wow fadeInDown animated"
+					data-toggle="modal" data-target="#modalLAE"
+					style="visibility: visible; min-height: 200px;">
+					<div class="col-xs-12 col-sm-4 text-center" style="padding: 0;">
+						<img class="img-responsive"
+							src="images/Administrator-Blue-icon.png" style="margin: auto;">
+					</div>
+
+					<h3 class="media-heading col-xs-12 col-sm-8"
+						style="padding: 0 15px; margin: 0;">
+						<p>
+							<b>Licenciado en Administración de Empresas</b>
+						</p>
+					</h3>
+				</div>
+			</div> 
+			<div class="col-sm-6 col-md-4">
+				<div class="media services-wrap wow fadeInDown animated"
+					style="visibility: visible; min-height: 200px;" data-toggle="modal"
+					data-target="#modalLCP">
+					<div class="col-xs-12 col-sm-4 text-center" style="padding: 0;">
+						<img class="img-responsive" src="images/stock-market-icon.png" style="margin: auto;">
+					</div>
+					<h3 class="media-heading col-xs-12 col-sm-8"
+						style="padding: 0 15px; margin: 0;">
+						<b>Licenciado en Contaduria Publica</b>
+					</h3>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="media services-wrap wow fadeInDown animated"
+					style="visibility: visible; min-height: 200px;" data-toggle="modal"
+					data-target="#modalLD">
+					<div class="col-xs-12 col-sm-4 text-center" style="padding: 0;">
+						<img class="img-responsive" src="images/Gavel-Law-icon.png" style="margin: auto;">
+					</div>
+					<h3 class="media-heading col-xs-12 col-sm-8"
+						style="padding: 0 15px; margin: 0;">
+						<b>Licenciado en Derecho </b>
+					</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/.row-->
+	<div class="row">
+		<div class="ccol-sm-6 col-md-4">
+			<div class="media services-wrap wow fadeInDown animated"
+				data-toggle="modal" data-target="#modalBACH"
+				style="visibility: visible; min-height: 200px;">
+				<div class="col-xs-12 col-sm-4 text-center" style="padding: 0;">
+					<img class="img-responsive" src="images/Education.png" style="margin: auto;">
+				</div>
+				<h3 class="media-heading col-xs-12 col-sm-8"
+					style="padding: 0 15px; margin: 0;">
+					<b>Bachillerato Semestral y Tetramestral<br></b>
+				</h3>
+			</div>
+		</div>
+		<div class="col-sm-6 col-md-4">
+			<div class="media services-wrap wow fadeInDown animated"
+				style="visibility: visible; min-height: 200px;" data-toggle="modal"
+				data-target="#modalBACH">
+				<div class="col-xs-12 col-sm-4 text-center" style="padding: 0;">
+					<img class="img-responsive" src="images/Teacher-icon.png" style="margin: auto;">
+				</div>
+					<h3 class="media-heading col-xs-12 col-sm-8" style="padding: 0 15px; margin:0;">
+						<b>Asistencia Educativa</b>
+					</h3>
+			</div>
+		</div>
+		<div class="col-sm-6 col-md-4">
+			<div class="media services-wrap wow fadeInDown animated"
+				style="visibility: visible; min-height: 200px;" data-toggle="modal"
+				data-target="#modalBACH">
+				<div class="col-xs-12 col-sm-4 text-center" style="padding: 0;">
+					<img class="img-responsive" src="images/Health-red-icon.png" style="margin: auto;">
+				</div>
+					<h3 class="media-heading col-xs-12 col-sm-8" style="padding: 0 15px; margin:0;">
+						<b>Asistencia Familiar y de Salud</b>
+					</h3>
+			</div>
+		</div>
+	</div>
+	<!--/.row-->
+	<!--/.row-->
+	</div>
+	<!--/.container-->
 </section>
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-10">
-            <h2 class="text-center">MODALIDAD MIXTA</h2>
-            <h3 class="text-center">Introduccion</h3>
-            <p class="text-justify">El uso de las nuevas tecnolog&#237;as en la educaci&#243;n transforma el proceso de aprendizaje y, por tanto, los comportamientos de los que ense&#241;an y de los que aprenden. Se modifican los roles tradicionales del docente y el alumno. La ense&#241;anza bajo esta modalidad supone una disminuci&#243;n de la jerarqu&#237;a y la directividad, al tiempo que estimula el trabajo aut&#243;nomo del alumno y exige que el profesor sea un animador y un tutor del proceso de aprendizaje del alumno.</p>
-            <br>
-            <hr style="margin: auto; margin-bottom: -15px; border-bottom: none; border-top: 1px solid #d1d1d1; width: 90%; display: block;">
-            <br>
-            <hr style="margin: auto; border-bottom: none; border-top: 1px solid #d1d1d1; width: 80%; display: block;">
-            <br>
-            <h3 class="text-center">Descripcion</h3>
-            <p class="text-justify">La posibilidad que las tecnolog&#237;as ofrecen de acceder r&#225;pidamente a una gran cantidad de informaci&#243;n hace necesario que el profesor complemente su tradicional actividad transmisora de conocimientos con un esfuerzo de "aprendizaje de su propio conocimiento a partir del conjunto de recursos de informaci&#243;n disponible. Aprender en un entorno con estas caracter&#237;sticas supone, por una parte, la flexibilidad en los tiempos y espacios destinados al aprendizaje y, por otra, el protagonismo de la interacci&#243;n entre los participantes del proceso para la construcci&#243;n de conocimientos significativos. De este modo, un aprendizaje virtual interactivo debe dise&#241;ar estrategias que posibiliten la interacci&#243;n sincr&#243;nica y asincr&#243;nica efectiva entre: alumno-contenido.</p>
-            <br>
-            <br>
-        </div>
-    </div>
-    <div class="row" style="width: 100%;">
-        <div class="col-sm-3">
-            <h4 class="text-center">
+<br>
+<div class="row">
+	<div class="col-sm-1"></div>
+	<div class="col-sm-10">
+		<h2 class="text-center">MODALIDAD MIXTA</h2>
+		<h3 class="text-center">Introduccion</h3>
+		<p class="text-justify">El uso de las nuevas tecnolog&#237;as en
+			la educaci&#243;n transforma el proceso de aprendizaje y, por tanto,
+			los comportamientos de los que ense&#241;an y de los que aprenden. Se
+			modifican los roles tradicionales del docente y el alumno. La
+			ense&#241;anza bajo esta modalidad supone una disminuci&#243;n de la
+			jerarqu&#237;a y la directividad, al tiempo que estimula el trabajo
+			aut&#243;nomo del alumno y exige que el profesor sea un animador y un
+			tutor del proceso de aprendizaje del alumno.</p>
+		<br>
+		<hr
+			style="margin: auto; margin-bottom: -15px; border-bottom: none; border-top: 1px solid #d1d1d1; width: 90%; display: block;">
+		<br>
+		<hr
+			style="margin: auto; border-bottom: none; border-top: 1px solid #d1d1d1; width: 80%; display: block;">
+		<br>
+		<h3 class="text-center">Descripcion</h3>
+		<p class="text-justify">La posibilidad que las tecnolog&#237;as
+			ofrecen de acceder r&#225;pidamente a una gran cantidad de
+			informaci&#243;n hace necesario que el profesor complemente su
+			tradicional actividad transmisora de conocimientos con un esfuerzo de
+			"aprendizaje de su propio conocimiento a partir del conjunto de
+			recursos de informaci&#243;n disponible. Aprender en un entorno con
+			estas caracter&#237;sticas supone, por una parte, la flexibilidad en
+			los tiempos y espacios destinados al aprendizaje y, por otra, el
+			protagonismo de la interacci&#243;n entre los participantes del
+			proceso para la construcci&#243;n de conocimientos significativos. De
+			este modo, un aprendizaje virtual interactivo debe dise&#241;ar
+			estrategias que posibiliten la interacci&#243;n sincr&#243;nica y
+			asincr&#243;nica efectiva entre: alumno-contenido.</p>
+		<br> <br>
+	</div>
+</div>
+<div class="row" style="width: 100%;">
+	<div class="col-sm-3">
+		<h4 class="text-center">
 			<span class="glyphicon glyphicon-star"></span>MODALIDAD MIXTA
 		</h4>
-            <br>
-            <p class="text-center">Clases mixtas de forma presencial y virtuales con sus respectivas actividades (desarrollo de los contenidos, consignas de los profesores, actividades de aprendizaje, actividades de evaluaci&#243;n y de autoevaluaci&#243;n).</p>
-        </div>
-        <div class="col-sm-3">
-            <h4 class="text-center">
+		<br>
+		<p class="text-center">Clases mixtas de forma presencial y
+			virtuales con sus respectivas actividades (desarrollo de los
+			contenidos, consignas de los profesores, actividades de aprendizaje,
+			actividades de evaluaci&#243;n y de autoevaluaci&#243;n).</p>
+	</div>
+	<div class="col-sm-3">
+		<h4 class="text-center">
 			<span class="glyphicon glyphicon-book"></span> CORREO ELECTRONICO
 		</h4>
-            <br>
-            <p class="text-center">Correo electr&#243;nico para comunicarse con tutores y estudiantes desde el mismo entorno virtual.</p>
-        </div>
-        <div class="col-sm-3">
-            <h4 class="text-center">
+		<br>
+		<p class="text-center">Correo electr&#243;nico para comunicarse
+			con tutores y estudiantes desde el mismo entorno virtual.</p>
+	</div>
+	<div class="col-sm-3">
+		<h4 class="text-center">
 			<span class="glyphicon glyphicon-check"></span>Chats y Foros
 		</h4>
-            <br>
-            <p class="text-center">Para propiciar la interacci&#243;n y los encuentros entre tutores y estudiantes.</p>
-        </div>
-        <div class="col-sm-3">
-            <h4 class="text-center">
+		<br>
+		<p class="text-center">Para propiciar la interacci&#243;n y los
+			encuentros entre tutores y estudiantes.</p>
+	</div>
+	<div class="col-sm-3">
+		<h4 class="text-center">
 			<span class="glyphicon glyphicon-glass"></span> COMUNIDAD VIRTUAL
 		</h4>
-            <br>
-            <p class="text-center">Organizada en &#225;reas de conocimientos de funcionamiento extra-aulico.</p>
-        </div>
-    </div>
-    <div class="row" style="width: 100%; border-bottom: 1px solid #f0f0f0;">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-3">
-            <h4 class="text-center">
+		<br>
+		<p class="text-center">Organizada en &#225;reas de conocimientos
+			de funcionamiento extra-aulico.</p>
+	</div>
+</div>
+<div class="row" style="width: 100%; border-bottom: 1px solid #f0f0f0;">
+	<div class="col-sm-2"></div>
+	<div class="col-sm-3">
+		<h4 class="text-center">
 			<span class="glyphicon glyphicon-glass"></span> INFORMACION
 		</h4>
-            <br>
-            <p class="text-center">Informacion actualizada del calendario acad&#233;mico dispuesto para cada curso.</p>
-        </div>
-        <div class="col-sm-3">
-            <h4 class="text-center">
+		<br>
+		<p class="text-center">Informacion actualizada del calendario
+			acad&#233;mico dispuesto para cada curso.</p>
+	</div>
+	<div class="col-sm-3">
+		<h4 class="text-center">
 			<span class="glyphicon glyphicon-glass"></span> MESA DE AYUDA
 		</h4>
-            <br>
-            <p class="text-center">Mesa de ayuda para realizar consultas t&#233;cnicas y tr&#225;mites administrativos en l&#237;nea.</p>
-        </div>
-        <div class="col-sm-3">
-            <h4 class="text-center">
+		<br>
+		<p class="text-center">Mesa de ayuda para realizar consultas
+			t&#233;cnicas y tr&#225;mites administrativos en l&#237;nea.</p>
+	</div>
+	<div class="col-sm-3">
+		<h4 class="text-center">
 			<span class="glyphicon glyphicon-share-alt"></span> AREA DEL
 			ESTUDIANTE
 		</h4>
-            <br>
-            <p class="text-center">Area del Estudiante que le ofrece herramientas para efectuar un seguimiento de su propia participaci&#243;n en el curso y un buz&#243;n para enviar las actividades realizadas en el marco del curso.</p>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="modalLAE" tabindex="-1" role="dialog" aria-labelledby="modalLAE" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="labelTitleLAE" style="font-family: t;">Licenciatura
+		<br>
+		<p class="text-center">Area del Estudiante que le ofrece
+			herramientas para efectuar un seguimiento de su propia
+			participaci&#243;n en el curso y un buz&#243;n para enviar las
+			actividades realizadas en el marco del curso.</p>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalLAE" tabindex="-1" role="dialog"
+	aria-labelledby="modalLAE" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="labelTitleLAE" style="font-family: t;">Licenciatura
 					en Administracion de Empresas</h4>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
-                    <p class="text-justify">Un Licenciado en Administraci&#243;n de Empresas es un profesional con visi&#243;n estrat&#233;gica capaz de crear, gestionar y dirigir de manera eficiente y eficaz las organizaciones en la era del conocimiento, coordinar el capital humano, administrar tecnolog&#237;a y recursos mediante la innovaci&#243;n en los procesos de negocios. Su formaci&#243;n se caracteriza enf&#225;ticamente en la conceptualizaci&#243;n y soporte de la estrategia local y global de la organizaci&#243;n, en la toma de decisiones anal&#237;tica, en la estructuraci&#243;n de los procesos de inteligencia para gesti&#243;n de negocios; sustentada en un enfoque sistem&#225;tico, &#233;tico y humanista.</p>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
-                    <p class="text-justify">El Administrador de Empresas es un profesional con alto grado de responsabilidad y creatividad, comprometido en el ejercicio de un liderazgo entusiasta, capaz de aplicar y desarrollar habilidades de direcci&#243;n, comunicaci&#243;n y de sinergia en cualquier tipo de organizaci&#243;n; est&#225; apto asimismo para la toma de decisiones acertadas y la adaptabilidad al cambio.</p>
-                </div>
-                <div class="modal-body">
-                    <img src="/images/materiasLAE.png" width="100%">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="modalLCP" tabindex="-1" role="dialog" aria-labelledby="modalLCP" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="labelTitleLAE" style="font-family: t;">Licenciatura
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
+				<p class="text-justify">Un Licenciado en Administraci&#243;n de
+					Empresas es un profesional con visi&#243;n estrat&#233;gica capaz
+					de crear, gestionar y dirigir de manera eficiente y eficaz las
+					organizaciones en la era del conocimiento, coordinar el capital
+					humano, administrar tecnolog&#237;a y recursos mediante la
+					innovaci&#243;n en los procesos de negocios. Su formaci&#243;n se
+					caracteriza enf&#225;ticamente en la conceptualizaci&#243;n y
+					soporte de la estrategia local y global de la organizaci&#243;n, en
+					la toma de decisiones anal&#237;tica, en la estructuraci&#243;n de
+					los procesos de inteligencia para gesti&#243;n de negocios;
+					sustentada en un enfoque sistem&#225;tico, &#233;tico y humanista.</p>
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
+				<p class="text-justify">El Administrador de Empresas es un
+					profesional con alto grado de responsabilidad y creatividad,
+					comprometido en el ejercicio de un liderazgo entusiasta, capaz de
+					aplicar y desarrollar habilidades de direcci&#243;n,
+					comunicaci&#243;n y de sinergia en cualquier tipo de
+					organizaci&#243;n; est&#225; apto asimismo para la toma de
+					decisiones acertadas y la adaptabilidad al cambio.</p>
+			</div>
+			<div class="modal-body">
+				<img src="/images/materiasLAE.png" width="100%">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalLCP" tabindex="-1" role="dialog"
+	aria-labelledby="modalLCP" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="labelTitleLAE" style="font-family: t;">Licenciatura
 					en Contadur&#237;a P&#250;blica</h4>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
-                    <p class="text-justify">UEl Licenciado en Contadur&#237;a P&#250;blica debe ser un conocedor de la econom&#237;a del pa&#237;s, con capacidad anal&#237;tica, interpretativa y organizativa, aplicable en el &#225;rea financiera y econ&#243;mica de las empresas, tanto p&#250;blicas como privadas. Toma decisiones en lo referente a los sistemas contables, su implantaci&#243;n, aplicaci&#243;n, control y evaluaci&#243;n. Asimismo, act&#250;a como asesor en los problemas contables y financieros; funge como fiscalizador de las actividades organizacionales. Act&#250;a como Auditor de empresas p&#250;blicas y privadas, tanto con fines judiciales como administrativos. El Contador P&#250;blico es el profesional responsable de manejar sistemas de informaci&#243;n financiera, conocer leyes fiscales, etc., y dictaminar estados financieros, todo con el fin de lograr un mejor aprovechamiento de los recursos de una entidad p&#250;blica o privada.</p>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
-                    <p class="text-justify">EEl egresado de la Licenciatura en Contadur&#237;a P&#250;blica estar&#225; capacitado para resolver problemas profesionales en nuestro medio tales como organizar grupos humanos para el logro de objetivos, asesorar y tomar decisiones en materia contable, fiscal, administrativa y financiera, operar documentaci&#243;n oficial, y con los conocimientos adquiridos dise&#241;ar procedimientos administrativos, utilizar modernos sistemas de computaci&#243;n, analizar e interpretar estados financieros en una entidad as&#237; como captar y registrar el origen y aplicaci&#243;n de recursos de una transacci&#243;n; adem&#225;s de tener una visi&#243;n anal&#237;tico- sint&#233;tico que le permita ejercer un amplio criterio profesional.</p>
-                </div>
-                <div class="modal-body">
-                    <img src="/images/materiasLCP.png" width="100%">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="modalLD" tabindex="-1" role="dialog" aria-labelledby="modalLD" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="labelTitleLAE" style="font-family: t;">Licenciatura
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
+				<p class="text-justify">UEl Licenciado en Contadur&#237;a
+					P&#250;blica debe ser un conocedor de la econom&#237;a del
+					pa&#237;s, con capacidad anal&#237;tica, interpretativa y
+					organizativa, aplicable en el &#225;rea financiera y econ&#243;mica
+					de las empresas, tanto p&#250;blicas como privadas. Toma decisiones
+					en lo referente a los sistemas contables, su implantaci&#243;n,
+					aplicaci&#243;n, control y evaluaci&#243;n. Asimismo, act&#250;a
+					como asesor en los problemas contables y financieros; funge como
+					fiscalizador de las actividades organizacionales. Act&#250;a como
+					Auditor de empresas p&#250;blicas y privadas, tanto con fines
+					judiciales como administrativos. El Contador P&#250;blico es el
+					profesional responsable de manejar sistemas de informaci&#243;n
+					financiera, conocer leyes fiscales, etc., y dictaminar estados
+					financieros, todo con el fin de lograr un mejor aprovechamiento de
+					los recursos de una entidad p&#250;blica o privada.</p>
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
+				<p class="text-justify">EEl egresado de la Licenciatura en
+					Contadur&#237;a P&#250;blica estar&#225; capacitado para resolver
+					problemas profesionales en nuestro medio tales como organizar
+					grupos humanos para el logro de objetivos, asesorar y tomar
+					decisiones en materia contable, fiscal, administrativa y
+					financiera, operar documentaci&#243;n oficial, y con los
+					conocimientos adquiridos dise&#241;ar procedimientos
+					administrativos, utilizar modernos sistemas de computaci&#243;n,
+					analizar e interpretar estados financieros en una entidad as&#237;
+					como captar y registrar el origen y aplicaci&#243;n de recursos de
+					una transacci&#243;n; adem&#225;s de tener una visi&#243;n
+					anal&#237;tico- sint&#233;tico que le permita ejercer un amplio
+					criterio profesional.</p>
+			</div>
+			<div class="modal-body">
+				<img src="/images/materiasLCP.png" width="100%">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalLD" tabindex="-1" role="dialog"
+	aria-labelledby="modalLD" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="labelTitleLAE" style="font-family: t;">Licenciatura
 					en Derecho</h4>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
-                    <p class="text-justify">El aspirante al programa de Licenciatura en Derecho, deber&#225; contar con conocimientos en el &#225;rea de ciencias sociales y humanas; con habilidades para la reflexi&#243;n cr&#237;tica, el an&#225;lisis, la s&#237;ntesis, la lectura, la expresi&#243;n oral y escrita, y la utilizaci&#243;n de los medios de informaci&#243;n y comunicaci&#243;n; as&#237; como actitudes y valores orientados a la justicia social y el respeto a los derechos humanos.
-                    </p>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
-                    <p class="text-justify">EEl egresado del programa de Licenciatura en Derecho conocer&#225;, interpretar&#225; y aplicar&#225; a trav&#233;s de la argumentaci&#243;n oral y escrita la norma jur&#237;dica en la soluci&#243;n de casos concretos; desarrollara investigaciones innovadoras que contribuyan al fortalecimiento del Estado democr&#225;tico y social de derecho y coadyuven a la soluci&#243;n de problemas sociales; contara con una formaci&#243;n integral inter y multidisciplinaria sustentada en principios &#233;ticos, human&#237;sticos y cient&#237;ficos; comprometido con el desarrollo sustentable para lograr un mejor nivel de vida.</p>
-                </div>
-                <div class="modal-body">
-                    <img src="/images/materiasLD.png" width="100%">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="modalBACH" tabindex="-1" role="dialog" aria-labelledby="modalBACH" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="labelTitleBACH" style="font-family: t;">Bachillerato
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
+				<p class="text-justify">El aspirante al programa de Licenciatura
+					en Derecho, deber&#225; contar con conocimientos en el &#225;rea de
+					ciencias sociales y humanas; con habilidades para la reflexi&#243;n
+					cr&#237;tica, el an&#225;lisis, la s&#237;ntesis, la lectura, la
+					expresi&#243;n oral y escrita, y la utilizaci&#243;n de los medios
+					de informaci&#243;n y comunicaci&#243;n; as&#237; como actitudes y
+					valores orientados a la justicia social y el respeto a los derechos
+					humanos.</p>
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
+				<p class="text-justify">EEl egresado del programa de
+					Licenciatura en Derecho conocer&#225;, interpretar&#225; y
+					aplicar&#225; a trav&#233;s de la argumentaci&#243;n oral y escrita
+					la norma jur&#237;dica en la soluci&#243;n de casos concretos;
+					desarrollara investigaciones innovadoras que contribuyan al
+					fortalecimiento del Estado democr&#225;tico y social de derecho y
+					coadyuven a la soluci&#243;n de problemas sociales; contara con una
+					formaci&#243;n integral inter y multidisciplinaria sustentada en
+					principios &#233;ticos, human&#237;sticos y cient&#237;ficos;
+					comprometido con el desarrollo sustentable para lograr un mejor
+					nivel de vida.</p>
+			</div>
+			<div class="modal-body">
+				<img src="/images/materiasLD.png" width="100%">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalBACH" tabindex="-1" role="dialog"
+	aria-labelledby="modalBACH" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="labelTitleBACH" style="font-family: t;">Bachillerato
 					General Plan Tetramestral</h4>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
-                    <p class="text-justify">El alumno debe tener inter&eacute;s por adquirir y aplicar conocimientos, habilidades, actitudes y valores en diversos contextos, demostrar h&aacute;bitos hacia el estudio, capacidad de an&aacute;lisis y s&iacute;ntesis, un buen manejo de la comunicaci&oacute;n oral y escrita, una actitud positiva frente a los retos educativos; deber&aacute; ser emprendedor, creativo, cr&iacute;tico y tener una actitud &eacute;tica y humanista.</p>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
-                    <p class="text-justify">Al concluir tus estudios en la Preparatoria ser&aacute;s capaz de organizar tu aprendizaje, habr&aacute;s desarrollado los conocimientos, habilidades, actitudes y valores que te permitir&aacute;n participar de forma activa en la vida social, pol&iacute;tica, econ&oacute;mica y cultural del pa&iacute;s; emprender o reorientar proyectos personales; acad&eacute;micos y laborales, as&iacute; como tambi&eacute;n ser&aacute;s capaz de proponer soluciones a problemas que ocurren en tu comunidad, pa&iacute;s o el mundo.</p>
-                </div>
-                <div class="modal-body">
-                    <img src="/images/materiasBACHT.png" width="100%">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="modalAE" tabindex="-1" role="dialog" aria-labelledby="modalAE" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="labelTitleAE" style="font-family: t;">Asistencia
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
+				<p class="text-justify">El alumno debe tener inter&eacute;s por
+					adquirir y aplicar conocimientos, habilidades, actitudes y valores
+					en diversos contextos, demostrar h&aacute;bitos hacia el estudio,
+					capacidad de an&aacute;lisis y s&iacute;ntesis, un buen manejo de
+					la comunicaci&oacute;n oral y escrita, una actitud positiva frente
+					a los retos educativos; deber&aacute; ser emprendedor, creativo,
+					cr&iacute;tico y tener una actitud &eacute;tica y humanista.</p>
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
+				<p class="text-justify">Al concluir tus estudios en la
+					Preparatoria ser&aacute;s capaz de organizar tu aprendizaje,
+					habr&aacute;s desarrollado los conocimientos, habilidades,
+					actitudes y valores que te permitir&aacute;n participar de forma
+					activa en la vida social, pol&iacute;tica, econ&oacute;mica y
+					cultural del pa&iacute;s; emprender o reorientar proyectos
+					personales; acad&eacute;micos y laborales, as&iacute; como
+					tambi&eacute;n ser&aacute;s capaz de proponer soluciones a
+					problemas que ocurren en tu comunidad, pa&iacute;s o el mundo.</p>
+			</div>
+			<div class="modal-body">
+				<img src="/images/materiasBACHT.png" width="100%">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalAE" tabindex="-1" role="dialog"
+	aria-labelledby="modalAE" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="labelTitleAE" style="font-family: t;">Asistencia
 					Educativa</h4>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
-                    <p class="text-justify">El asistente educativo es la persona que por medio del trabajo profesional con ni&#241;os auxilia a la educadora en la atenci&oacute;n psicopedag&oacute;gica y asistencial de los ni&#241;os, se encarga en buena medida del trabajo cotidiano con los ni&#241;os al cuidarlos, alimentarlos, estimularlos jugar y convivir con ellos, contando con habilidades y actitudes positivas para ayudarlos en su proceso de desarrollo de 0 a 6 a&#241;os dando una atenci&oacute;n prioritaria al ni&#241;o.</p>
-                    <h4 style="color: rgb(5, 109, 163)">EL PLAN DE ESTUDIOS DE LA
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
+				<p class="text-justify">El asistente educativo es la persona que
+					por medio del trabajo profesional con ni&#241;os auxilia a la
+					educadora en la atenci&oacute;n psicopedag&oacute;gica y
+					asistencial de los ni&#241;os, se encarga en buena medida del
+					trabajo cotidiano con los ni&#241;os al cuidarlos, alimentarlos,
+					estimularlos jugar y convivir con ellos, contando con habilidades y
+					actitudes positivas para ayudarlos en su proceso de desarrollo de 0
+					a 6 a&#241;os dando una atenci&oacute;n prioritaria al ni&#241;o.</p>
+				<h4 style="color: rgb(5, 109, 163)">EL PLAN DE ESTUDIOS DE LA
 					ESPECIALIDAD EN ASISTENCIA EDUCATIVA ESTA CONFORMADO POR LAS
 					SIGUIENTES AREAS:</h4>
-                    <p>
-                        * CUIDADO DE LOS NI&#241;OS LACTANTES EN CENTROS DE BIENESTAR INFANTIL.</br>
-                        * CUIDADO DE LOS NI&#241;OS MATERNALES EN CENTROS DE BIENESTAR INFANTIL.
-                        </br> * CUIDADO DE LOS NI&#241;OS DE PREESCOLAR EN CENTROS DE BIENESTAR INFANTIL.</br>
-                    </p>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
-                    <p class="text-justify">Nuestros Egresados de la especialidad en Asistencia Educativa, desarrollan habilidades, conocimientos y actitudes que les permiten constituirse como uno de los ejes centrales dentro del proceso ense&#241;anza-aprendizaje del ni&#241;o.</p>
-                </div>
-                <div class="modal-body">
-                    <img src="/images/educacion.png" width="100%">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="modalAFS" tabindex="-1" role="dialog" aria-labelledby="modalAFS" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="labelTitleAFS" style="font-family: t;">Asistencia
+				<p>
+					* CUIDADO DE LOS NI&#241;OS LACTANTES EN CENTROS DE BIENESTAR
+					INFANTIL.</br> * CUIDADO DE LOS NI&#241;OS MATERNALES EN CENTROS DE
+					BIENESTAR INFANTIL. </br> * CUIDADO DE LOS NI&#241;OS DE PREESCOLAR EN
+					CENTROS DE BIENESTAR INFANTIL.</br>
+				</p>
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
+				<p class="text-justify">Nuestros Egresados de la especialidad en
+					Asistencia Educativa, desarrollan habilidades, conocimientos y
+					actitudes que les permiten constituirse como uno de los ejes
+					centrales dentro del proceso ense&#241;anza-aprendizaje del
+					ni&#241;o.</p>
+			</div>
+			<div class="modal-body">
+				<img src="/images/educacion.png" width="100%">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalAFS" tabindex="-1" role="dialog"
+	aria-labelledby="modalAFS" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="labelTitleAFS" style="font-family: t;">Asistencia
 					Familiar y de Salud</h4>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
-                    <p class="text-justify">Se debe contar con un alto sentido human&iacute;stico, moral y &eacute;tico para atender y escuchar respetuosamente, proporcionar la atenci&oacute;n de higiene que requiera la persona a su cuidado, cumplir cabalmente las disposiciones m&eacute;dicas de los profesionistas que de manera simult&aacute;nea brinden atenci&oacute;n a la persona que cuida, as&iacute; como tener una disposici&oacute;n genuina para conducirse de manera emp&aacute;tica, comprensiva, honesta, confiable y profesional.
-                    </p>
-                    <h4 style="color: rgb(5, 109, 163)">EL PLAN DE ESTUDIOS DE LA
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
+				<p class="text-justify">Se debe contar con un alto sentido
+					human&iacute;stico, moral y &eacute;tico para atender y escuchar
+					respetuosamente, proporcionar la atenci&oacute;n de higiene que
+					requiera la persona a su cuidado, cumplir cabalmente las
+					disposiciones m&eacute;dicas de los profesionistas que de manera
+					simult&aacute;nea brinden atenci&oacute;n a la persona que cuida,
+					as&iacute; como tener una disposici&oacute;n genuina para
+					conducirse de manera emp&aacute;tica, comprensiva, honesta,
+					confiable y profesional.</p>
+				<h4 style="color: rgb(5, 109, 163)">EL PLAN DE ESTUDIOS DE LA
 					ESPECIALIDAD EN ASISTENCIA FAMILIAR Y DE SALUD ESTA CONFORMADO POR
 					LAS SIGUIENTES AREAS:</h4>
-                    <p class="text-justify">
-                        * ORIENTACION FAMILIAR Y EDUCATIVA</br> * ASISTENCIA A PERSONAS CON DISCAPACIDAD AUDITIVA</br> * ATENCION A PERSONAS CON DISCAPACIDAD VISUAL</br>
-                        * CONTRIBUCION EN LA RECUPERACION DE LAS CAPACIDADES FISICAS DE LAS PERSONAS
-                        </br> * ASISTENCIA DE ENFERMERIA PARA PERSONAS CON DISCAPACIDAD</br>
-                        * ATENCIO A PERSONAS ADULTAS MAYORES</br>
-                    </p>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
-                    <p class="text-justify">Los egresados de esta carrera estar&aacute;n capacitados para cuidar de forma integral a enfermos o sujetos en proceso de recuperaci&oacute;n, a trav&eacute;s de conocimientos espec&iacute;ficos de anatom&iacute;a y fisiolog&iacute;a, reflexolog&iacute;a, fundamentos de psicolog&iacute;a y filosof&iacute;a, generalidades de psicopatolog&iacute;a, patolog&iacute;a geri&aacute;trica, adicciones, farmacolog&iacute;a, salud p&uacute;blica y legislaci&oacute;n m&eacute;dica, as&iacute; como competencias particulares de terapia f&iacute;sica, lo que les permitir&aacute; cuidar de personas con diversas condiciones ya sea por discapacidad, enfermedad f&iacute;sica o mental.</p>
-                </div>
-                <div class="modal-body">
-                    <img src="/images/salud.jpg" style="">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="modalATE" tabindex="-1" role="dialog" aria-labelledby="modalAFS" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="labelTitleLAE" style="font-family: t;">Auxiliar
+				<p class="text-justify">
+					* ORIENTACION FAMILIAR Y EDUCATIVA</br> * ASISTENCIA A PERSONAS CON
+					DISCAPACIDAD AUDITIVA</br> * ATENCION A PERSONAS CON DISCAPACIDAD VISUAL</br>
+					* CONTRIBUCION EN LA RECUPERACION DE LAS CAPACIDADES FISICAS DE LAS
+					PERSONAS </br> * ASISTENCIA DE ENFERMERIA PARA PERSONAS CON DISCAPACIDAD</br>
+					* ATENCIO A PERSONAS ADULTAS MAYORES</br>
+				</p>
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
+				<p class="text-justify">Los egresados de esta carrera
+					estar&aacute;n capacitados para cuidar de forma integral a enfermos
+					o sujetos en proceso de recuperaci&oacute;n, a trav&eacute;s de
+					conocimientos espec&iacute;ficos de anatom&iacute;a y
+					fisiolog&iacute;a, reflexolog&iacute;a, fundamentos de
+					psicolog&iacute;a y filosof&iacute;a, generalidades de
+					psicopatolog&iacute;a, patolog&iacute;a geri&aacute;trica,
+					adicciones, farmacolog&iacute;a, salud p&uacute;blica y
+					legislaci&oacute;n m&eacute;dica, as&iacute; como competencias
+					particulares de terapia f&iacute;sica, lo que les permitir&aacute;
+					cuidar de personas con diversas condiciones ya sea por
+					discapacidad, enfermedad f&iacute;sica o mental.</p>
+			</div>
+			<div class="modal-body">
+				<img src="/images/salud.jpg" style="">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalATE" tabindex="-1" role="dialog"
+	aria-labelledby="modalAFS" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="labelTitleLAE" style="font-family: t;">Auxiliar
 					Tecnico en Enfermeria</h4>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
-                    <p class="text-justify">El Instituto Prem?ico forma profesionales con un amplio contenido cient?ico y una formaci? cl?ica adecuada. Para llevar a cabo esta tarea se precisan habilidades intelectuales, como la capacidad cr?ica y de reflexi?. Aptitudes humanas para el cuidado a la persona y para el trabajo en equipo. Adem? se requiere responsabilidad, equilibrio y madurez personal. Habilidades para comunicarse efectivamente de manera oral y escrita, trabajar en equipo, comprender textos, realizar observaciones y trabajar bajo presi? de tiempo y estr?. Actitudes y valores de servicio colaboraci? y disposici?, respeto, responsabilidad, esp?itu de investigaci? e iniciativa.</p>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
-                    <p class="text-justify">El egresado como Auxiliar T?nico en Enfermer?,?se caracteriza por el alto nivel de compromiso con las necesidades de salud de las personas, familias y comunidades, integr?dose como miembro activo del equipo de salud. Est? capacitado para desempe?rse en establecimientos intra y extra hospitalarios, en los cuales asiste y proporciona cuidados de enfermer? de diversa complejidad para promover, proteger, recuperar y rehabilitar la salud, acorde a las necesidades de las personas y grupos comunitarios</p>
-                </div>
-                <div class="modal-body">
-                    <img src="/images/materiasATE.png" width="100%">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="modalATTF" tabindex="-1" role="dialog" aria-labelledby="modalAFS" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="labelTitleLAE" style="font-family: t;">Auxiliar
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
+				<p class="text-justify">El Instituto Prem?ico forma
+					profesionales con un amplio contenido cient?ico y una formaci?
+					cl?ica adecuada. Para llevar a cabo esta tarea se precisan
+					habilidades intelectuales, como la capacidad cr?ica y de reflexi?.
+					Aptitudes humanas para el cuidado a la persona y para el trabajo en
+					equipo. Adem? se requiere responsabilidad, equilibrio y madurez
+					personal. Habilidades para comunicarse efectivamente de manera oral
+					y escrita, trabajar en equipo, comprender textos, realizar
+					observaciones y trabajar bajo presi? de tiempo y estr?. Actitudes y
+					valores de servicio colaboraci? y disposici?, respeto,
+					responsabilidad, esp?itu de investigaci? e iniciativa.</p>
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
+				<p class="text-justify">El egresado como Auxiliar T?nico en
+					Enfermer?,?se caracteriza por el alto nivel de compromiso con las
+					necesidades de salud de las personas, familias y comunidades,
+					integr?dose como miembro activo del equipo de salud. Est?
+					capacitado para desempe?rse en establecimientos intra y extra
+					hospitalarios, en los cuales asiste y proporciona cuidados de
+					enfermer? de diversa complejidad para promover, proteger, recuperar
+					y rehabilitar la salud, acorde a las necesidades de las personas y
+					grupos comunitarios</p>
+			</div>
+			<div class="modal-body">
+				<img src="/images/materiasATE.png" width="100%">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalATTF" tabindex="-1" role="dialog"
+	aria-labelledby="modalAFS" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="labelTitleLAE" style="font-family: t;">Auxiliar
 					Tecnico en Terapia Fisica</h4>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
-                    <p class="text-justify">El Auxiliar T?nico en Terapia F?ica reconoce la necesidad social de cubrir cualquier servicio de salud con la m? alta calidad, por lo que las personas que sean parte de nuestro equipo deber? contar con: vocaci? de servicio, actitud ?ica y honesta, responsable, disciplina acad?ica, inter? por la investigaci?.
-                    </p>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
-                    <p class="text-justify">El egresado como Auxiliar T?nico en Terapia F?ica obtendr?los conocimientos y el dominio de la Terapia F?ica y la Rehabilitaci?, para satisfacer la prevenci? de los factores de riesgo y de enfermedades generadoras de discapacidad. Contar?con la formaci? cient?ica, humana y ?ica, que le permita desarrollar capacidades y actitudes para trabajar en grupos interdisciplinarios y proporcionar atenci? a pacientes que demandan servicio de rehabilitaci? con discapacidades temporales o permanentes para su integraci? social y lograr as?una rehabilitaci? integral.</p>
-                </div>
-                <div class="modal-body">
-                    <img src="/images/materiasATTF.png" width="100%">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="modalATUM" tabindex="-1" role="dialog" aria-labelledby="modalAFS" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="labelTitleLAE" style="font-family: t;">Auxiliar
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
+				<p class="text-justify">El Auxiliar T?nico en Terapia F?ica
+					reconoce la necesidad social de cubrir cualquier servicio de salud
+					con la m? alta calidad, por lo que las personas que sean parte de
+					nuestro equipo deber? contar con: vocaci? de servicio, actitud ?ica
+					y honesta, responsable, disciplina acad?ica, inter? por la
+					investigaci?.</p>
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
+				<p class="text-justify">El egresado como Auxiliar T?nico en
+					Terapia F?ica obtendr?los conocimientos y el dominio de la Terapia
+					F?ica y la Rehabilitaci?, para satisfacer la prevenci? de los
+					factores de riesgo y de enfermedades generadoras de discapacidad.
+					Contar?con la formaci? cient?ica, humana y ?ica, que le permita
+					desarrollar capacidades y actitudes para trabajar en grupos
+					interdisciplinarios y proporcionar atenci? a pacientes que demandan
+					servicio de rehabilitaci? con discapacidades temporales o
+					permanentes para su integraci? social y lograr as?una rehabilitaci?
+					integral.</p>
+			</div>
+			<div class="modal-body">
+				<img src="/images/materiasATTF.png" width="100%">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalATUM" tabindex="-1" role="dialog"
+	aria-labelledby="modalAFS" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="labelTitleLAE" style="font-family: t;">Auxiliar
 					Tecnico en Urgencias Medicas</h4>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
-                    <p class="text-justify">Prolongar la vida de la humanidad a trav? de la atenci? de urgencias m?icas y? pre-hospitalarias, aplicando los conocimientos, procedimientos y protocolos de estandarizaci? nacional e internacional vigentes. Se requiere de un profesional? h?il y? competente para evaluar, prescribir tratamientos y transportar a pacientes lesionados y/o enfermos(as), privilegiando la dignidad de las personas y con la finalidad de salvaguardar la vida, integridad f?ica y mejorar las posibilidades de recuperaci? de la salud.</p>
-                    <h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
-                    <p class="text-justify">El egresado de esta carrera estar? capacitado para: Utilizar los conocimientos y las destrezas con profesionalidad, al proveer el cuidado seguro y efectivo en situaciones de emergencia dentro de un marco de valores ?icos y morales. Es capaz de controlar una escena de emergencia, coordinar servicios y colaborar con otros miembros del? equipo de salud. Asume responsabilidad por su crecimiento profesional.</p>
-                </div>
-                <div class="modal-body">
-                    <img src="/images/materiasATUM.png" width="100%">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="modalADMASP" tabindex="-1" role="dialog" aria-labelledby="#modalADMASP" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="labelTitleLAE" style="font-family: t;">REQUISITOS
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE INGRESO:</h4>
+				<p class="text-justify">Prolongar la vida de la humanidad a
+					trav? de la atenci? de urgencias m?icas y? pre-hospitalarias,
+					aplicando los conocimientos, procedimientos y protocolos de
+					estandarizaci? nacional e internacional vigentes. Se requiere de un
+					profesional? h?il y? competente para evaluar, prescribir
+					tratamientos y transportar a pacientes lesionados y/o enfermos(as),
+					privilegiando la dignidad de las personas y con la finalidad de
+					salvaguardar la vida, integridad f?ica y mejorar las posibilidades
+					de recuperaci? de la salud.</p>
+				<h4 style="color: rgb(5, 109, 163)">PERFIL DE EGRESADO:</h4>
+				<p class="text-justify">El egresado de esta carrera estar?
+					capacitado para: Utilizar los conocimientos y las destrezas con
+					profesionalidad, al proveer el cuidado seguro y efectivo en
+					situaciones de emergencia dentro de un marco de valores ?icos y
+					morales. Es capaz de controlar una escena de emergencia, coordinar
+					servicios y colaborar con otros miembros del? equipo de salud.
+					Asume responsabilidad por su crecimiento profesional.</p>
+			</div>
+			<div class="modal-body">
+				<img src="/images/materiasATUM.png" width="100%">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalADMASP" tabindex="-1" role="dialog"
+	aria-labelledby="#modalADMASP" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="labelTitleLAE" style="font-family: t;">REQUISITOS
 					DE ADMISI&#243N</h4>
-                    <h5>Para poder inscribir a cada uno de nuestros alumnos es
+				<h5>Para poder inscribir a cada uno de nuestros alumnos es
 					necesario contar con la siguiente documentaci&#243n:</h5>
-                    <h4 style="color: rgb(5, 109, 163)">DOCUMENTACI&#243N
+				<h4 style="color: rgb(5, 109, 163)">DOCUMENTACI&#243N
 					REQUERIDA:</h4>
-                    <h6 style="color: rgb(5, 109, 163)">LICENCIATURA</h6>
-                    <p class="text-justify">
-                        * Original y 2 copias de acta de nacimiento.
-                        <br> * Original y 2 copias de certificado de bachillerato.(Este documento debe estar legalizado).
-                        <br> * 2 Copias de Clave &Uacute;nica de Registro de Poblaci&#243n (CURP).
-                        <br> * 6 fotograf&iacute;as tama&ntilde;o infantil en blanco y negro.
-                        <br>
-                        <h6 style="color: rgb(5, 109, 163)">PREPARATORIA</h6>
-                        <p class="text-justify">
-                            * 2 copias de acta de nacimiento.
-                            <br> * 2 copias de certificado de secundaria ambos lados.
-                            <br> * 2 Copias de Clave &Uacute;nica de Registro de Poblaci&#243;n (CURP).
-                            <br> * 6 fotograf&iacute;as tama&ntilde;o infantil en blanco y negro.
-                            <br>
-                            <h6 style="color: rgb(5, 109, 163)">ASISTENCIA EDUCATIVA</h6>
-                            <p class="text-justify">
-                                * Acta de nacimiento.
-                                <br> * Certificado de secundaria ambos lados..
-                                <br> * Clave &Uacute;nica de Registro de Poblaci&#243n (CURP).
-                                <br> * 6 fotograf&iacute;as tama&ntilde;o infantil en blanco y negro.
-                                <br>
-                                <h6 style="color: rgb(5, 109, 163)">PREM&Eacute;DICO</h6>
-                                <p class="text-justify">
-                                    * Acta de nacimiento.
-                                    <br> * Certificado de secundaria ambos lados.
-                                    <br> * Clave &Uacute;nica de Registro de Poblaci&#243n (CURP).
-                                    <br> * 6 fotograf&iacute;as tama&ntilde;o infantil en blanco y negro.
-                                    <br>
-                                    <h4 style="color: rgb(5, 109, 163)">ENTREGA DE
+				<h6 style="color: rgb(5, 109, 163)">LICENCIATURA</h6>
+				<p class="text-justify">
+					* Original y 2 copias de acta de nacimiento. <br> * Original y
+					2 copias de certificado de bachillerato.(Este documento debe estar
+					legalizado). <br> * 2 Copias de Clave &Uacute;nica de Registro
+					de Poblaci&#243n (CURP). <br> * 6 fotograf&iacute;as
+					tama&ntilde;o infantil en blanco y negro. <br>
+				<h6 style="color: rgb(5, 109, 163)">PREPARATORIA</h6>
+				<p class="text-justify">
+					* 2 copias de acta de nacimiento. <br> * 2 copias de
+					certificado de secundaria ambos lados. <br> * 2 Copias de
+					Clave &Uacute;nica de Registro de Poblaci&#243;n (CURP). <br>
+					* 6 fotograf&iacute;as tama&ntilde;o infantil en blanco y negro. <br>
+				<h6 style="color: rgb(5, 109, 163)">ASISTENCIA EDUCATIVA</h6>
+				<p class="text-justify">
+					* Acta de nacimiento. <br> * Certificado de secundaria ambos
+					lados.. <br> * Clave &Uacute;nica de Registro de Poblaci&#243n
+					(CURP). <br> * 6 fotograf&iacute;as tama&ntilde;o infantil en
+					blanco y negro. <br>
+				<h6 style="color: rgb(5, 109, 163)">PREM&Eacute;DICO</h6>
+				<p class="text-justify">
+					* Acta de nacimiento. <br> * Certificado de secundaria ambos
+					lados. <br> * Clave &Uacute;nica de Registro de Poblaci&#243n
+					(CURP). <br> * 6 fotograf&iacute;as tama&ntilde;o infantil en
+					blanco y negro. <br>
+				<h4 style="color: rgb(5, 109, 163)">ENTREGA DE
 					DOCUMENTACI&#243;N:</h4>
-                                    <h5 class="text-justify">Es indispensable que todos los alumnos
+				<h5 class="text-justify">Es indispensable que todos los alumnos
 					entreguen su documentaci&oacute;n dentro de los primeros 15
 					d&iacute;as de inscripci&oacute;n, de lo contrario no podran ser
 					inscritos.</h5>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			</div>
+		</div>
+	</div>
+</div>
 </div>
